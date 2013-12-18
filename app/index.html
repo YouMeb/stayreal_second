@@ -26,6 +26,8 @@
     <!-- <div class="container" ng-view=""></div> -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <a id="post">post</a>
+     <a id="login">login</a>
      <script>
        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -34,10 +36,14 @@
 
        ga('create', 'UA-XXXXX-X');
        ga('send', 'pageview');
-    </script>    
+
+      // Load the SDK Asynchronously
+    </script>  
+
         <!-- build:js scripts/modules.js -->
         <!-- endbuild -->
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script type="text/javascript" src="http://connect.facebook.net/zh_TW/all.js"></script>
         <script src="bower_components/sections.js/dist/sectionsjs.js"></script>
         <script src="bower_components/hammerjs/dist/hammer.min.js"></script>
         <script src="scripts/app.js"></script>
