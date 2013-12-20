@@ -1,0 +1,258 @@
+@charset "UTF-8";
+/* CSS Document */
+/* ========================== clearfix =========================== */
+div{
+	*zoom: 1;
+	margin: 0;
+	padding: 0;
+
+}
+div:before,
+div:after {
+	display:table;
+	line-height:0;
+	content:"";
+}
+div:after {
+	clear:both;
+}
+ul{
+	*zoom: 1;
+	margin: 0;
+	padding: 0;
+
+}
+ul:before,
+ul:after {
+	display:table;
+	line-height:0;
+	content:"";
+}
+ul:after {
+	clear:both;
+}
+/* ========================== body =========================== */
+body{
+	width:100%;
+	height: 100%;
+}
+/* ====================================== index.html =========================== */
+/* ========================== wrap =========================== */
+.wrap{
+	width: 960px;
+	margin: 0 auto;
+	position: relative;
+}
+.content{
+	position: relative;
+	height: 650px;
+}
+.topic{
+	width: 445px;
+	height: 81px;
+	position: absolute;
+	top:20px;
+	left: 59px;
+}
+.circle{
+	width: 85px;
+   height: 85px;
+   background: white;
+   position: absolute;
+   border-radius: 200px;
+   z-index: -1;
+   top: 388px;
+   left: -14px;
+}
+.fb{
+	position: absolute;
+   top: 404px;
+   left: 5px;
+}
+.weibo{
+	position: absolute;
+   top: 432px;
+   left: 5px;
+   width: 51px;
+}
+.formBK{
+	width:490px;
+	height: 100%;
+	float: left;
+}
+.bubble{
+	width: 412px;
+	height: 329px;
+	margin-top: 170px;
+	margin-left: 77px;
+	position: relative;
+	z-index: 5;
+}
+.form-date{
+	width: 440px;
+	height: 48px;
+	margin-top: 130px;
+	margin-left: 25px;
+}
+.form-date li{
+	float: left;
+}
+.form-date select{
+	padding: 5px 12px;
+	text-align: center;
+	height:45px;
+}
+.f-year select{
+	width: 120px;
+}
+.f-month select{
+	width: 86px;
+	margin: 0 19px;
+}
+.f-day select{
+	width: 86px;
+}
+.luck-btn{
+	width: 169px;
+	height: 95px;
+	display: block;
+	margin: 25px 0 0 106px;
+}
+.ktBK{
+	width: 508px;
+	height: 683px;
+	position: absolute;
+	top:40px;
+	right: 33px;
+	z-index: 2;
+}
+.footer{
+	width:900px;
+	height:70px;
+	margin: 0 auto;
+	clear: both;
+	position: relative;
+	z-index: 3;
+}
+.nav{
+	float: left;
+	margin-left: 43px;
+}
+.nav li{
+	float: left;
+	display: block;
+}
+.nav .n-acti{
+	width: 141px;
+	display: block;
+	height:45px;
+}
+.nav .n-shop{
+	width: 111px;
+	display: block;
+	height:45px;
+	margin-left: 40px;
+}
+.logo2{
+	float: right;
+	margin-right: 43px;
+	width: 179px;
+	height: 60px;
+}
+/* ====================================== content.html =========================== */
+.lucky-ball{
+	width: 703px;
+	height: 703px;
+	margin: -380px auto 0 auto;
+}
+.content2{
+	height:1620px;
+}
+.wheel-kitty{
+	width:340px;
+	height:433px;
+	position: absolute;
+	left:50%;
+	margin-left: -170px;
+	top:193px;
+	z-index: 5;
+}
+.lucky-result{
+	width: 556px;
+	height: 395px;
+	margin: 210px auto 0 auto;
+	position: relative;
+	z-index: 1;
+}
+.play-again{
+	width: 29px;
+	height: 182px;
+	display: block;
+	position: absolute;
+	z-index: 2;
+	left: 45px;
+	top:125px;
+}
+.share-btn{
+	width: 556px;
+	height:22px;
+	text-align: center;
+	position: absolute;
+	z-index: 2;
+	bottom:8px;
+}
+.share-btn a{
+	display: inline-block;
+	margin: 0 7px;
+	width:62px;
+	height: 22px;
+}
+.suggestBK{
+	width: 900px;
+	height:713px;
+	position: relative;
+	margin: 0 auto;
+}
+.suggest-item{
+	width: 286px;
+	height: 408px;
+	position: absolute;
+	left: 40px;
+	top: 30px;
+}
+.suggest-cloth{
+	width: 408px;
+	height: 537px;
+	position: absolute;
+	right: 52px;
+	top: 176px;
+}
+.footer.con{
+	height: 95px;
+	width: 836px;
+	padding-top: 165px;
+}
+.con .nav{
+	margin-left: 76px;
+}
+.con .nav .n-acti {
+	width: 136px;
+	height: 44px;
+}
+.con .nav .n-shop {
+	width: 107px;
+	height: 44px;
+	margin-left: 60px;
+}
+.con .logo2{
+	margin-right: 0;
+	width: 189px;
+	height: 64px;
+}
+.bottom-circle{
+	width: 481px;
+	height: 274px;
+	position: absolute;
+	left: 70px;
+	bottom: 0;
+}

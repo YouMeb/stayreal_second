@@ -1,6 +1,18 @@
 (function(){
-  var fbAppId;
+  var fbAppId, fb;
   fbAppId = '219756031530311';
+  fb = {
+    at: '',
+    init: function(){
+      return initfb();
+    },
+    login: function(){
+      return loginfb();
+    },
+    post: function(){
+      return postfb();
+    }
+  };
   FB.init({
     appId: fbAppId,
     status: true,
@@ -13,7 +25,8 @@
     if (deepEq$(_resp.status, 'connected', '===')) {
       uid = _resp.authResponse.userID;
       accessToken = _resp.authResponse.accessToken;
-      return console.log(accessToken);
+      console.log(accessToken);
+      return fb.at = accessToken;
     } else {
       return false;
     }
