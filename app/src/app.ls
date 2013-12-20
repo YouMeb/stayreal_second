@@ -7,7 +7,7 @@ init =
 game = 
 	array:['good1' 'good2' 'nice1' 'nice2' 'nice3' 'oops' 'soso1' 'soso2']
 	go: (r)->
-		window.location.href = '/content-'+@array[r]+'.html'
+		window.location.href = 'content-'+@array[r]+'.html'
 	init: ->
 		new Date().getTime()
 	play: ->

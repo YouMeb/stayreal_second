@@ -8,7 +8,7 @@
   game = {
     array: ['good1', 'good2', 'nice1', 'nice2', 'nice3', 'oops', 'soso1', 'soso2'],
     go: function(r){
-      return window.location.href = '/content-' + this.array[r] + '.html';
+      return window.location.href = 'content-' + this.array[r] + '.html';
     },
     init: function(){
       return new Date().getTime();
