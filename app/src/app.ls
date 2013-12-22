@@ -16,6 +16,7 @@ game =
 		n = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum
 		@go(n)
 		# console.log n
+
 fb = 
 	at:''
 	user_id: ''
@@ -24,7 +25,6 @@ fb =
 	post : -> postfb()
 	draw : -> drawfb()
 	postpic : -> postpicfb()
-
 
 
 const initfb = ->
@@ -97,6 +97,7 @@ const postpicfb = ->
 				control.content.PageName.update_post("error", "")      
 	)
 
+
 const drawfb = ->
 	console.log(fb.at)
 	xhr = new XMLHttpRequest()
@@ -108,8 +109,10 @@ const drawfb = ->
 	)
 	xhr.send()		
 
+
 const resp = ->
 	console.log(this.responseText)
+
 
 $post = document.getElementById('post')
 $login = document.getElementById('login')

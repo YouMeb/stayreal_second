@@ -2,7 +2,7 @@
   "name": "stayreal",
   "version": "0.0.0",
   "dependencies": {
-    "sections.js": "~0.1.0",
+    "sections.js": "~0.1.1",
     "hammerjs": "~1.0.5"
   },
   "devDependencies": {}

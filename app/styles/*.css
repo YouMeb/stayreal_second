@@ -1,0 +1,49 @@
+.lucky-ball-up{animation:ballup ease 1s}
+.suggest--cloth--right{animation:clothright ease 4s}
+.suggest--item--left{animation:itemleft ease 4s}
+@-moz-keyframes ballup{0%{top:-703px}
+80%{top:0}
+100%{top:-20px}
+}@-webkit-keyframes ballup{0%{top:-703px}
+80%{top:0}
+100%{top:-20px}
+}@-o-keyframes ballup{0%{top:-703px}
+80%{top:0}
+100%{top:-20px}
+}@-ms-keyframes ballup{0%{top:-703px}
+80%{top:0}
+100%{top:-20px}
+}@keyframes ballup{0%{top:-703px}
+80%{top:0}
+100%{top:-20px}
+}@-moz-keyframes itemleft{0%{left:-2000px}
+90%{left:60px}
+100%{left:40px}
+}@-webkit-keyframes itemleft{0%{left:-2000px}
+90%{left:60px}
+100%{left:40px}
+}@-o-keyframes itemleft{0%{left:-2000px}
+90%{left:60px}
+100%{left:40px}
+}@-ms-keyframes itemleft{0%{left:-2000px}
+90%{left:60px}
+100%{left:40px}
+}@keyframes itemleft{0%{left:-2000px}
+90%{left:60px}
+100%{left:40px}
+}@-moz-keyframes clothright{0%{right:-2000px}
+90%{right:80px}
+100%{right:52px}
+}@-webkit-keyframes clothright{0%{right:-2000px}
+90%{right:80px}
+100%{right:52px}
+}@-o-keyframes clothright{0%{right:-2000px}
+90%{right:80px}
+100%{right:52px}
+}@-ms-keyframes clothright{0%{right:-2000px}
+90%{right:80px}
+100%{right:52px}
+}@keyframes clothright{0%{right:-2000px}
+90%{right:80px}
+100%{right:52px}
+}

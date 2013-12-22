@@ -163,6 +163,9 @@ body{
 .lucky-ball{
 	width: 703px;
 	height: 703px;
+	position: absolute;
+	top:-20px;
+	left: 128px;
 	margin: -380px auto 0 auto;
 }
 .content2{
@@ -180,9 +183,55 @@ body{
 .lucky-result{
 	width: 556px;
 	height: 395px;
+	top:300px;
 	margin: 210px auto 0 auto;
 	position: relative;
 	z-index: 1;
+}
+.lucky-result-good1{
+	width: 556px;
+	height: 395px;
+	background: url('../img/result-good1.png') no-repeat;
+}
+.lucky-result-good2{
+	width: 556px;
+	height: 395px;
+	background: url('../img/result-good2.png') no-repeat;
+}
+.lucky-result-nice1{
+	width: 556px;
+	height: 395px;
+	background: url('../img/result-nice1.png') no-repeat;
+}
+.lucky-result-nice2{
+	width: 556px;
+	height: 395px;
+	background: url('../img/result-nice2.png') no-repeat;
+}
+.lucky-result-nice3{
+	width: 556px;
+	height: 395px;
+	background: url('../img/result-nice3.png') no-repeat;
+}
+.lucky-result-oops{
+	width: 556px;
+	height: 395px;
+	background: url('../img/result-good1.png') no-repeat;
+}
+.lucky-result-soso1{
+	width: 556px;
+	height: 395px;
+	background: url('../img/result-soso1.png') no-repeat;
+}
+.lucky-result-soso2{
+	width: 556px;
+	height: 395px;
+	background: url('../img/result-soso2.png') no-repeat;
+}
+.lucky-ball-good1{
+	width: 703px;
+	height: 703px;
+	background: url('../img/ball-good.png') no-repeat;
 }
 .play-again{
 	width: 29px;
@@ -218,14 +267,25 @@ body{
 	height: 408px;
 	position: absolute;
 	left: 40px;
-	top: 30px;
+	top: 150px;
+}
+.suggest-item .suggest-item-img{
+	width: 286px;
+	height: 408px;
+	background: url('../img/suggest-item.png') no-repeat;
 }
 .suggest-cloth{
 	width: 408px;
 	height: 537px;
 	position: absolute;
 	right: 52px;
-	top: 176px;
+	/*top: 176px;*/
+	top:300px;
+}
+.suggest-cloth .suggest-cloth-img{
+	width: 408px;
+	height: 537px;
+	background: url('../img/suggest-cloth.png') no-repeat;
 }
 .footer.con{
 	height: 95px;
