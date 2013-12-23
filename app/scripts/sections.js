@@ -3,26 +3,41 @@
   page = window.page = sections.create();
   console.log(page);
   page.section(0, function(section){
-    var luckyballtop;
+    var luckyballtop, bg_3;
     console.log(section);
     console.log('123');
     luckyballtop = document.querySelector('.lucky-ball-up');
-    section.transitions([{
-      key: 'top',
-      start: 0,
-      end: 150,
-      from: 120,
-      to: -200,
-      format: '%spx',
-      target: luckyballtop
-    }]);
+    bg_3 = document.querySelector('.bg_3');
+    section.transitions([
+      {
+        key: 'top',
+        start: 0,
+        end: 150,
+        from: 120,
+        to: -200,
+        format: '%spx',
+        target: luckyballtop
+      }, {
+        key: 'top',
+        start: 100,
+        end: 150,
+        from: 0,
+        to: -500,
+        format: '%spx',
+        target: bg_3
+      }
+    ]);
   });
   page.section(1, function(section){
-    var item, cloth;
+    var item, cloth, lucky, nActi, nShop, bg_2;
     console.log(section);
     console.log('123');
     item = document.querySelector('.suggest-item');
     cloth = document.querySelector('.suggest-cloth');
+    lucky = document.querySelector('.lucky-result-div');
+    nActi = document.querySelector('.n-acti');
+    nShop = document.querySelector('.n-shop');
+    bg_2 = document.querySelector('.bg_2');
     section.transitions([
       {
         key: 'left',
@@ -36,10 +51,55 @@
         key: 'opacity',
         start: 80,
         end: 120,
-        from: 0.8,
+        from: 0.3,
         to: 1,
         format: '%s',
         target: item,
+        prefix: true
+      }, {
+        key: 'transform',
+        start: 0,
+        end: 120,
+        from: 0,
+        to: 720,
+        format: 'rotateY(%sdeg)',
+        target: cloth,
+        prefix: true
+      }, {
+        key: '-webkit-transform',
+        start: 0,
+        end: 120,
+        from: 1,
+        to: 1.1,
+        format: 'scale(%s)',
+        target: lucky,
+        prefix: true
+      }, {
+        key: 'transform',
+        start: 0,
+        end: 120,
+        from: 1,
+        to: 1.1,
+        format: 'scale(%s)',
+        target: lucky,
+        prefix: true
+      }, {
+        key: '-ms-transform',
+        start: 0,
+        end: 120,
+        from: 0,
+        to: 720,
+        format: 'rotateY(%sdeg)',
+        target: cloth,
+        prefix: true
+      }, {
+        key: '-webkit-transform',
+        start: 0,
+        end: 120,
+        from: 0,
+        to: 720,
+        format: 'rotateY(%sdeg)',
+        target: cloth,
         prefix: true
       }, {
         key: 'right',
@@ -53,11 +113,55 @@
         key: 'opacity',
         start: 80,
         end: 120,
-        from: 0.8,
+        from: 0.3,
         to: 1,
         format: '%s',
         target: cloth,
         prefix: true
+      }, {
+        key: '-webkit-transform',
+        start: 0,
+        end: 120,
+        from: 0,
+        to: 720,
+        format: 'rotateY(%sdeg)',
+        target: item,
+        prefix: true
+      }, {
+        key: '-ms-transform',
+        start: 0,
+        end: 120,
+        from: 0,
+        to: 720,
+        format: 'rotateY(%sdeg)',
+        target: item,
+        prefix: true
+      }, {
+        key: 'transform',
+        start: 0,
+        end: 120,
+        from: 0,
+        to: 720,
+        format: 'rotateY(%sdeg)',
+        target: item,
+        prefix: true
+      }, {
+        key: 'opacity',
+        start: 80,
+        end: 120,
+        from: 0.3,
+        to: 1,
+        format: '%s',
+        target: nActi,
+        prefix: true
+      }, {
+        key: 'top',
+        start: 100,
+        end: 150,
+        from: 1600,
+        to: 600,
+        format: '%spx',
+        target: bg_2
       }
     ]);
   });

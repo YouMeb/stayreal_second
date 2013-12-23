@@ -36,30 +36,32 @@ const initfb = ->
 	)
 
 const loginfb = ->
-	FB.login((res)->
-		if(res.authResponse)
-			FB.api('/me', (response) !->
-				init.login = 1
-				console.log(response)	
-				if(!response.verified)
-					alert('很抱歉你的帳號未通過驗證！再試一次')
-				FB.getLoginStatus((_resp) ->
-					console.log(_resp)
-					if (_resp.status === 'connected') 
-						uid = _resp.authResponse.userID
-						accessToken = _resp.authResponse.accessToken
-						# console.log(accessToken)
-						fb.user_id = _resp.authResponse.userID
-						fb.at = accessToken
-						game.play()
-					else
-						false
-				)	
-			)
-	,scope:'email,photo_upload,publish_actions'
-	)
-	false
-
+	if(FB)
+		FB.login((res)->
+			if(res.authResponse)
+				FB.api('/me', (response) !->
+					init.login = 1
+					console.log(response)	
+					if(!response.verified)
+						alert('很抱歉你的帳號未通過驗證！再試一次')
+					FB.getLoginStatus((_resp) ->
+						console.log(_resp)
+						if (_resp.status === 'connected') 
+							uid = _resp.authResponse.userID
+							accessToken = _resp.authResponse.accessToken
+							# console.log(accessToken)
+							fb.user_id = _resp.authResponse.userID
+							fb.at = accessToken
+							game.play()
+						else
+							false
+					)	
+				)
+		,scope:'email,photo_upload,publish_actions'
+		)
+		false
+	else
+		game.play()
 const postfb = ->
 	FB.ui(
 		method:'feed'
@@ -124,6 +126,7 @@ $year = document.getElementById('year') || ''
 $month = document.getElementById('month') || ''
 $day = document.getElementById('day') || ''
 
+content-value = document.getElementById('content-value')
 
 # year = $year.options[$year.selectedIndex].value
 # month = $month.options[$month.selectedIndex].value
@@ -147,3 +150,24 @@ if($draw)
 if($postpic)
 	$postpic.onclick = ->
 		fb.postpic()
+
+if content-value.value == 'content'
+	FB.getLoginStatus((_resp) ->
+		if (_resp.status == 'connected') 
+			uid = _resp.authResponse.userID
+			accessToken = _resp.authResponse.accessToken
+			fb.at = accessToken	
+		else
+			false
+	)
+	myFunction = ->
+		myVar = setTimeout(
+			->
+				# fb.post() 
+		2000
+		)		
+	myStopFunction = ->
+		clearTimeout(myVar)
+	myFunction()
+
+# console.log navigator.userAgent

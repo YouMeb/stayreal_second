@@ -23,7 +23,7 @@
         <link rel="stylesheet"  type="text/css" href="styles/*.css" />
         <!-- endbuild -->
 </head>
-  <body id="bg2">
+  <body id="bg2" class="bktransition">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -33,18 +33,21 @@
     <![endif]-->
     <!-- <div class="container" ng-view=""></div> -->
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+    <input type="hidden" id="content-value"value="content" />
     <div class="wrap">
       <div class="content content2">
         <section class="section">
+          <!-- <div class="bg_3 bg_3top"></div> -->
           <div class="lucky-ball lucky-ball-up">
             <!--大吉-->
             <div class="lucky-ball-good1"></div>
             <!-- 大吉換圖 -->
           </div>
           <div class="wheel-kitty"></div>
+          <div class="wheel-bk ror"></div>
           <div class="lucky-result">
             <!--運勢-->
-            <div class="lucky-result-good1"></div>
+            <div class="lucky-result-good1 lucky-result-div"></div>
             <!-- 運勢換圖 -->
             <a class="play-again" href="/" onfocus="if(this.blur)this.blur()"></a>
             <div class="share-btn">
@@ -60,6 +63,8 @@
           </div>
         </section>
         <section class="section">
+          
+          <!-- <div class="bg_2"></div> -->
           <div class="suggestBK">
             <div class="suggest-item" >
               <a href="#">
@@ -80,14 +85,18 @@
           </section>
         </div>
         <div class="footer con">
-           <div class="nav">
-              <ul>
-                 <li><a class="n-acti" href="#" onfocus="if(this.blur)this.blur()"></a></li>
-                 <li><a class="n-shop" href="#" onfocus="if(this.blur)this.blur()"></a></li>
-              </ul>
-           </div>
-        <div class="logo2"></div>
-      </div>
+          <div class="nav">
+            <ul>
+              <li>
+                <a class="n-acti" href="#"></a>
+              </li>
+              <li>
+                <a class="n-shop" href="#"></a>
+              </li>
+            </ul>
+          </div>
+          <div class="logo2"></div>
+        </div>
         <div class="bottom-circle"></div>
     </div>
     <!-- AddThis Button BEGIN -->
@@ -102,15 +111,9 @@
        ga('create', 'UA-XXXXX-X');
        ga('send', 'pageview');
     </script>  
-        <!-- build:js scripts/modules.js -->
-        <!-- endbuild -->
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script type="text/javascript" src="http://connect.facebook.net/zh_TW/all.js"></script>
     <script src="bower_components/sections.js/dist/sectionsjs.js"></script>
-    <script src="bower_components/hammerjs/dist/hammer.min.js"></script>
     <script src="scripts/app.js"></script>
-    <script src="scripts/content.js"></script>
     <script src="scripts/sections.js"></script>
-        <!-- endbuild -->
 </body>
 </html>

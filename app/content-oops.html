@@ -20,6 +20,7 @@
         <link rel="stylesheet"  type="text/css" href="styles/normalize.css" />
         <link rel="stylesheet"  type="text/css" href="styles/default.css" />
         <link rel="stylesheet"  type="text/css" href="styles/content.css" />
+        <link rel="stylesheet"  type="text/css" href="styles/*.css" />
         <!-- endbuild -->
 </head>
   <body id="bg2">
@@ -32,52 +33,69 @@
     <![endif]-->
     <!-- <div class="container" ng-view=""></div> -->
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+    <input type="hidden" id="content-value"value="content" />
     <div class="wrap">
       <div class="content content2">
-         <div class="lucky-ball">
-            <!--大吉--><img src="img/ball-oops.png"/><!-- 大吉換圖 -->
-         </div>
-         <div class="wheel-kitty"></div>
-         <div class="lucky-result">
-            <!--運勢--><img src="img/result-oops.png"/><!-- 運勢換圖 -->
-            <a class="play-again" href="#" onfocus="if(this.blur)this.blur()"></a>
+        <section class="section">
+          <div class="lucky-ball lucky-ball-up">
+            <!--大吉-->
+            <div class="lucky-ball-good1"></div>
+            <!-- 大吉換圖 -->
+          </div>
+          <div class="wheel-kitty"></div>
+          <div class="lucky-result">
+            <!--運勢-->
+            <div class="lucky-result-oops lucky-result-div"></div>
+            <!-- 運勢換圖 -->
+            <a class="play-again" href="/" onfocus="if(this.blur)this.blur()"></a>
             <div class="share-btn">
                <a id="fb" class="addthis_button_facebook" />
-                  <img src="img/fb.png"
-                 width="62" height="22" border="0" alt="Share" />
-                </a>
-                <a id="weibo" class="addthis_button_sinaweibo"/>
-                  <img src="img/weibo.png"
-                 width="62" height="22" border="0" alt="Share" />
-                </a>
+                <img src="img/fb.png"
+               width="62" height="22" border="0" alt="Share" />
+              </a>
+              <a id="weibo" class="addthis_button_sinaweibo"/>
+                <img src="img/weibo.png"
+               width="62" height="22" border="0" alt="Share" />
+              </a>
             </div>
-         </div>
-         <div class="suggestBK">
-            <div class="suggest-item">
-               <a href="#">
-               <!--小物--><img src="img/suggest-item.png"/><!-- 建議小物換圖 -->
-               </a>
+          </div>
+        </section>
+        <section class="section">
+          <div class="suggestBK">
+            <div class="suggest-item" >
+              <a href="#">
+               <!--小物-->
+               <div class="suggest-item-img"></div>
+               <!-- 建議小物換圖 -->
+              </a>
             </div>
             <div class="suggest-cloth">
-               <a href="#">
-               <!--穿搭--><img src="img/suggest-cloth.png"/><!-- 建議穿搭換圖 -->
-               </a>
+              <a href="#">
+                <!--穿搭-->
+                <div class="suggest-cloth-img">
+                </div>
+                <!-- 建議穿搭換圖 -->
+              </a>
             </div>
-         </div>
-      </div>
-      <div class="footer con">
-         <div class="nav">
+           </div>
+          </section>
+        </div>
+        <div class="footer con">
+          <div class="nav">
             <ul>
-               <li><a class="n-acti" href="#" onfocus="if(this.blur)this.blur()"></a></li>
-               <li><a class="n-shop" href="#" onfocus="if(this.blur)this.blur()"></a></li>
+              <li>
+                <a class="n-acti" href="#"></a>
+              </li>
+              <li>
+                <a class="n-shop" href="#"></a>
+              </li>
             </ul>
-         </div>
-         <div class="logo2"></div>
-      </div>
-      <div class="bottom-circle"></div>
-      
-   </div>
-   <!-- AddThis Button BEGIN -->
+          </div>
+          <div class="logo2"></div>
+        </div>
+        <div class="bottom-circle"></div>
+    </div>
+    <!-- AddThis Button BEGIN -->
     <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52b3b2485fa1bb21"></script>
     <!-- AddThis Button END -->
@@ -89,14 +107,9 @@
        ga('create', 'UA-XXXXX-X');
        ga('send', 'pageview');
     </script>  
-        <!-- build:js scripts/modules.js -->
-        <!-- endbuild -->
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script type="text/javascript" src="http://connect.facebook.net/zh_TW/all.js"></script>
     <script src="bower_components/sections.js/dist/sectionsjs.js"></script>
-    <script src="bower_components/hammerjs/dist/hammer.min.js"></script>
     <script src="scripts/app.js"></script>
-    <script src="scripts/content.js"></script>
-        <!-- endbuild -->
+    <script src="scripts/sections.js"></script>
 </body>
 </html>

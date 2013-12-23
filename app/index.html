@@ -20,9 +20,10 @@
         <link rel="stylesheet"  type="text/css" href="styles/normalize.css" />
         <link rel="stylesheet"  type="text/css" href="styles/default.css" />
         <link rel="stylesheet"  type="text/css" href="styles/content.css" />
+        <link rel="stylesheet"  type="text/css" href="styles/*.css" />
         <!-- endbuild -->
 </head>
-  <body ng-app="limitstyleLayoutApp">
+  <body>
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -33,21 +34,24 @@
     <!-- <div class="container" ng-view=""></div> -->
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <a id="post">post</a>
+    <input type="hidden" id="content-value" value="index" />
     <!-- <a id="login">login</a> -->
     <div class="wrap">
       <div class="content">
-        <div class="circle"></div>
-        <a id="fb" class="addthis_button_facebook" />
-          <img src="img/fb.png"
-         width="62" height="22" border="0" alt="Share" />
-        </a>
-        <a id="weibo" class="addthis_button_sinaweibo"/>
-          <img src="img/weibo.png"
-         width="62" height="22" border="0" alt="Share" />
-        </a>
-        <div class="topic"></div>
+        <div class="circle">
+          <a id="fb" class="addthis_button_facebook" />
+            <img src="img/fb1.png"
+           width="51" height="18" border="0" alt="Share" class="fb"/>
+          </a>
+          <a id="weibo" class="addthis_button_sinaweibo"/>
+            <img src="img/weibo1.png"
+           width="51" height="18" border="0" alt="Share" class="weibo"/>
+          </a>
+         </div>
+        
+        <div class="topic topic--top"></div>
         <div class="formBK">
-            <div class="bubble">
+            <div class="bubble bubble--pop">
                <ul class="form-date">
                   <li class="f-year">
                      <select id="year">
@@ -164,7 +168,7 @@
                <a class="luck-btn" id="login" onfocus="if(this.blur)this.blur()"></a>
             </div>
           </div>
-        <div class="ktBK"></div>
+        <div class="ktBK ktBK--opacity"></div>
       </div>
       <div class="footer">
         <div class="nav">

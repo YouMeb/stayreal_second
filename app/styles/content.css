@@ -43,18 +43,80 @@ background: #e50011;
 .nav .n-acti{
 	background: url(../img/nav-activity2.png) no-repeat center;
 }
+.nav .n-acti:hover{
+	-moz-transform:scale(1.2);
+    -moz-transition: transform;
+    -moz-transition-duration: 0.3s;
+    -webkit-transform:scale(1.2);
+    -webkit-transition: transform;
+    -webkit-transition-duration: 0.3s;
+    -o-transform:scale(1.2);
+    -o-transition: transform;
+    -o-transition-duration: 0.3s;
+    -ms-transform:scale(1.2);
+    -ms-transition: transform;
+    -ms-transition-duration: 0.3s;
+}
 .nav .n-shop{
 	background: url(../img/nav-shop2.png) no-repeat center;
+}
+.nav .n-shop:hover{
+	-moz-transform:scale(1.2);
+  -moz-transition: transform;
+  -moz-transition-duration: 0.3s;
+  -webkit-transform:scale(1.2);
+  -webkit-transition: transform;
+  -webkit-transition-duration: 0.3s;
+  -o-transform:scale(1.2);
+  -o-transition: transform;
+  -o-transition-duration: 0.3s;
+  -ms-transform:scale(1.2);
+  -ms-transition: transform;
+  -ms-transition-duration: 0.3s;
 }
 .logo2{
 	background: url(../img/logo2.png) no-repeat center;
 }
 /* ====================================== content.html =========================== */
 #bg2{
-	background: url(../img/BG2.jpg) repeat center -25px;
+	/*background: #e50011;*/
+}
+
+#bg_4{
+	background: url(../img/BG-4.jpg) repeat center -25px;	
+}
+.bg_3{
+	width: 100%;
+	height: 1600px;
+	opacity: .8;
+	position: absolute;
+	z-index: 3;
+	top:0;
+	left: 0;
+	background: url(../img/BG-3.png) repeat center -25px;
+}
+.bg_2{
+	position: absolute;
+	z-index: 2;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 1000px;
+	opacity: .9;
+	background: url(../img/BG-2.png) repeat center -25px;
+}
+.bg_1{
+	position: absolute;
+	z-index: 1;
+	top:1600px;
+	left: 0;
+	width: 100%;
+	height: 1600px;
+	opacity: .9;
+	background: url(../img/BG-1.png) repeat center -25px;
 }
 .wheel-kitty{
-	background: url(../img/luckyKT3.gif) no-repeat center;
+	background: url(../img/KT-1.png) no-repeat center;
 }
 .play-again{
 	background: url(../img/play-again.png) no-repeat center;

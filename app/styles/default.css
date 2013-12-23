@@ -56,24 +56,31 @@ body{
 }
 .circle{
 	width: 85px;
-   height: 85px;
-   background: white;
-   position: absolute;
-   border-radius: 200px;
-   z-index: -1;
-   top: 388px;
-   left: -14px;
+	height: 85px;
+	background: white;
+	position: absolute;
+	border-radius: 200px;
+	z-index: 5;
+	top: 388px;
+	left: -14px;
 }
 .fb{
+	width:51px;
+	height:18px;
+	display: block;
 	position: absolute;
-   top: 404px;
-   left: 5px;
+   top:18px;
+   left: 50%;
+   margin-left: -25.5px;
 }
 .weibo{
 	position: absolute;
-   top: 432px;
-   left: 5px;
-   width: 51px;
+   left: 50%;
+   margin-left: -25.5px;
+   bottom:22px;
+   width:51px;
+	height:18px;
+	display: block;
 }
 .formBK{
 	width:490px;
@@ -232,6 +239,48 @@ body{
 	width: 703px;
 	height: 703px;
 	background: url('../img/ball-good.png') no-repeat;
+}
+.lucky-ball-good2{
+	width: 703px;
+	height: 703px;
+	background: url('../img/ball-good.png') no-repeat;
+}
+.lucky-ball-nice1{
+	width: 703px;
+	height: 703px;
+	background: url('../img/ball-good.png') no-repeat;
+}
+.lucky-ball-nice2{
+	width: 703px;
+	height: 703px;
+	background: url('../img/ball-good.png') no-repeat;
+}
+.lucky-ball-nice3{
+	width: 703px;
+	height: 703px;
+	background: url('../img/ball-good.png') no-repeat;
+}
+.lucky-ball-oops{
+	width: 703px;
+	height: 703px;
+	background: url('../img/ball-good.png') no-repeat;
+}
+.lucky-ball-soso1{
+	width: 703px;
+	height: 703px;
+	background: url('../img/ball-good.png') no-repeat;
+}
+.lucky-ball-soso2{
+	width: 703px;
+	height: 703px;
+	background: url('../img/ball-good.png') no-repeat;
+}
+.wheel-bk{
+	width: 340px;
+	height: 340px;
+	left:310px;
+	position: absolute;
+	background: url(../img/wheel.png) no-repeat center;
 }
 .play-again{
 	width: 29px;

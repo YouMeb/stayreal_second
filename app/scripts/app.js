@@ -1,5 +1,5 @@
 (function(){
-  var fbAppId, init, game, fb, initfb, loginfb, postfb, postpicfb, drawfb, resp, $post, $login, $draw, $postpic, $year, $month, $day;
+  var fbAppId, init, game, fb, initfb, loginfb, postfb, postpicfb, drawfb, resp, $post, $login, $draw, $postpic, $year, $month, $day, contentValue, myFunction, myStopFunction;
   fbAppId = '219756031530311';
   init = {
     login: 0,
@@ -49,33 +49,37 @@
     });
   };
   loginfb = function(){
-    FB.login(function(res){
-      if (res.authResponse) {
-        return FB.api('/me', function(response){
-          init.login = 1;
-          console.log(response);
-          if (!response.verified) {
-            alert('很抱歉你的帳號未通過驗證！再試一次');
-          }
-          FB.getLoginStatus(function(_resp){
-            var uid, accessToken;
-            console.log(_resp);
-            if (deepEq$(_resp.status, 'connected', '===')) {
-              uid = _resp.authResponse.userID;
-              accessToken = _resp.authResponse.accessToken;
-              fb.user_id = _resp.authResponse.userID;
-              fb.at = accessToken;
-              return game.play();
-            } else {
-              return false;
+    if (FB) {
+      FB.login(function(res){
+        if (res.authResponse) {
+          return FB.api('/me', function(response){
+            init.login = 1;
+            console.log(response);
+            if (!response.verified) {
+              alert('很抱歉你的帳號未通過驗證！再試一次');
             }
+            FB.getLoginStatus(function(_resp){
+              var uid, accessToken;
+              console.log(_resp);
+              if (deepEq$(_resp.status, 'connected', '===')) {
+                uid = _resp.authResponse.userID;
+                accessToken = _resp.authResponse.accessToken;
+                fb.user_id = _resp.authResponse.userID;
+                fb.at = accessToken;
+                return game.play();
+              } else {
+                return false;
+              }
+            });
           });
-        });
-      }
-    }, {
-      scope: 'email,photo_upload,publish_actions'
-    });
-    return false;
+        }
+      }, {
+        scope: 'email,photo_upload,publish_actions'
+      });
+      return false;
+    } else {
+      return game.play();
+    }
   };
   postfb = function(){
     return FB.ui({
@@ -120,6 +124,7 @@
   $year = document.getElementById('year') || '';
   $month = document.getElementById('month') || '';
   $day = document.getElementById('day') || '';
+  contentValue = document.getElementById('content-value');
   fb.init();
   if ($login) {
     $login.onclick = function(){
@@ -140,6 +145,26 @@
     $postpic.onclick = function(){
       return fb.postpic();
     };
+  }
+  if (contentValue.value === 'content') {
+    FB.getLoginStatus(function(_resp){
+      var uid, accessToken;
+      if (_resp.status === 'connected') {
+        uid = _resp.authResponse.userID;
+        accessToken = _resp.authResponse.accessToken;
+        return fb.at = accessToken;
+      } else {
+        return false;
+      }
+    });
+    myFunction = function(){
+      var myVar;
+      return myVar = setTimeout(function(){}, 2000);
+    };
+    myStopFunction = function(){
+      return clearTimeout(myVar);
+    };
+    myFunction();
   }
   function deepEq$(x, y, type){
     var toString = {}.toString, hasOwnProperty = {}.hasOwnProperty,
