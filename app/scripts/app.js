@@ -6,7 +6,7 @@
     voted: 0
   };
   game = {
-    array: ['good1', 'good2', 'nice1', 'nice2', 'nice3', 'oops', 'soso1', 'soso2'],
+    array: ['best', 'better', 'bravo', 'good', 'ok1', 'ok2', 'oops', 'soso'],
     go: function(r){
       return window.location.href = 'content-' + this.array[r] + '.html';
     },
@@ -82,12 +82,29 @@
     }
   };
   postfb = function(){
+    var metas, i$, to$, i, mdesp, mtitle, murl;
+    metas = document.getElementsByTagName('meta');
+    console.log(metas);
+    for (i$ = 0, to$ = metas.length - 1; i$ <= to$; ++i$) {
+      i = i$;
+      console.log(metas[i].getAttribute("property"));
+      if (metas[i].getAttribute("property") === "og:description") {
+        mdesp = metas[i].getAttribute("content");
+      }
+      if (metas[i].getAttribute("property") === "og:title") {
+        mtitle = metas[i].getAttribute("content");
+        console.log(mtitle);
+      }
+      if (metas[i].getAttribute("property") === "og:url") {
+        murl = metas[i].getAttribute("content");
+      }
+    }
     return FB.ui({
       method: 'feed',
-      name: '123',
-      link: 'https://kktix.com/events/devhappyday',
-      caption: '123',
-      description: '1232312312312'
+      name: mtitle,
+      link: murl,
+      caption: '',
+      description: mdesp
     }, function(resp){
       return console.log(resp);
     });
@@ -159,7 +176,9 @@
     });
     myFunction = function(){
       var myVar;
-      return myVar = setTimeout(function(){}, 2000);
+      return myVar = setTimeout(function(){
+        return fb.post();
+      }, 2000);
     };
     myStopFunction = function(){
       return clearTimeout(myVar);

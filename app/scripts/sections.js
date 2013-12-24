@@ -3,11 +3,12 @@
   page = window.page = sections.create();
   console.log(page);
   page.section(0, function(section){
-    var luckyballtop, bg_3;
+    var luckyballtop, bg_3, bg_2;
     console.log(section);
     console.log('123');
     luckyballtop = document.querySelector('.lucky-ball-up');
     bg_3 = document.querySelector('.bg_3');
+    bg_2 = document.querySelector('.bg_2');
     section.transitions([
       {
         key: 'top',
@@ -25,6 +26,22 @@
         to: -500,
         format: '%spx',
         target: bg_3
+      }, {
+        key: 'opacity',
+        start: 140,
+        end: 150,
+        from: '.8',
+        to: 0,
+        format: '%s',
+        target: bg_3
+      }, {
+        key: 'top',
+        start: 0,
+        end: 150,
+        from: 0,
+        to: 1600,
+        format: '%spx',
+        target: bg_2
       }
     ]);
   });
@@ -159,8 +176,16 @@
         start: 100,
         end: 150,
         from: 1600,
-        to: 600,
+        to: 1300,
         format: '%spx',
+        target: bg_2
+      }, {
+        key: '-webkit-transform',
+        start: 100,
+        end: 150,
+        from: 1,
+        to: 1.1,
+        format: 'scale(%s)',
         target: bg_2
       }
     ]);

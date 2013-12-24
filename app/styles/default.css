@@ -125,6 +125,7 @@ body{
 	display: block;
 	margin: 25px 0 0 106px;
 }
+
 .ktBK{
 	width: 508px;
 	height: 683px;
@@ -195,86 +196,133 @@ body{
 	position: relative;
 	z-index: 1;
 }
-.lucky-result-good1{
+.lucky-result-best{
 	width: 556px;
 	height: 395px;
-	background: url('../img/result-good1.png') no-repeat;
+	background: url('../img/result-best.png') no-repeat;
 }
-.lucky-result-good2{
+.lucky-result-better{
 	width: 556px;
 	height: 395px;
-	background: url('../img/result-good2.png') no-repeat;
+	background: url('../img/result-better.png') no-repeat;
 }
-.lucky-result-nice1{
+.lucky-result-bravo{
 	width: 556px;
 	height: 395px;
-	background: url('../img/result-nice1.png') no-repeat;
+	background: url('../img/result-bravo.png') no-repeat;
 }
-.lucky-result-nice2{
+.lucky-result-good{
 	width: 556px;
 	height: 395px;
-	background: url('../img/result-nice2.png') no-repeat;
+	background: url('../img/result-good.png') no-repeat;
 }
-.lucky-result-nice3{
+.lucky-result-ok1{
 	width: 556px;
 	height: 395px;
-	background: url('../img/result-nice3.png') no-repeat;
+	background: url('../img/result-ok1.png') no-repeat;
+}
+.lucky-result-ok2{
+	width: 556px;
+	height: 395px;
+	background: url('../img/result-ok2.png') no-repeat;
 }
 .lucky-result-oops{
 	width: 556px;
 	height: 395px;
-	background: url('../img/result-good1.png') no-repeat;
+	background: url('../img/result-oops.png') no-repeat;
 }
-.lucky-result-soso1{
+.lucky-result-soso{
 	width: 556px;
 	height: 395px;
-	background: url('../img/result-soso1.png') no-repeat;
+	background: url('../img/result-soso.png') no-repeat;
 }
-.lucky-result-soso2{
-	width: 556px;
-	height: 395px;
-	background: url('../img/result-soso2.png') no-repeat;
+.lucky-ball-best{
+	width: 703px;
+	height: 703px;
+	background: url('../img/ball-best.png') no-repeat;
 }
-.lucky-ball-good1{
+.lucky-ball-better{
+	width: 703px;
+	height: 703px;
+	background: url('../img/ball-better.png') no-repeat;
+}
+.lucky-ball-bravo{
+	width: 703px;
+	height: 703px;
+	background: url('../img/ball-bravo.png') no-repeat;
+}
+.lucky-ball-good{
 	width: 703px;
 	height: 703px;
 	background: url('../img/ball-good.png') no-repeat;
 }
-.lucky-ball-good2{
+.lucky-ball-ok1{
 	width: 703px;
 	height: 703px;
-	background: url('../img/ball-good.png') no-repeat;
+	background: url('../img/ball-ok1.png') no-repeat;
 }
-.lucky-ball-nice1{
+.lucky-ball-ok2{
 	width: 703px;
 	height: 703px;
-	background: url('../img/ball-good.png') no-repeat;
-}
-.lucky-ball-nice2{
-	width: 703px;
-	height: 703px;
-	background: url('../img/ball-good.png') no-repeat;
-}
-.lucky-ball-nice3{
-	width: 703px;
-	height: 703px;
-	background: url('../img/ball-good.png') no-repeat;
+	background: url('../img/ball-ok2.png') no-repeat;
 }
 .lucky-ball-oops{
 	width: 703px;
 	height: 703px;
-	background: url('../img/ball-good.png') no-repeat;
+	background: url('../img/ball-oops.png') no-repeat;
 }
-.lucky-ball-soso1{
+.lucky-ball-soso{
 	width: 703px;
 	height: 703px;
-	background: url('../img/ball-good.png') no-repeat;
+	background: url('../img/ball-soso.png') no-repeat;
 }
-.lucky-ball-soso2{
-	width: 703px;
-	height: 703px;
-	background: url('../img/ball-good.png') no-repeat;
+.suggest-item-img-1 {
+	width: 286px;
+	height: 408px;
+	background: url('../img/sug-item1.png') no-repeat;
 }
+.suggest-item-img-2 {
+	width: 286px;
+	height: 408px;
+	background: url('../img/sug-item2.png') no-repeat;
+}
+.suggest-item-img-3 {
+	width: 286px;
+	height: 408px;
+	background: url('../img/sug-item3.png') no-repeat;
+}
+.suggest-item-img-4 {
+	width: 286px;
+	height: 408px;
+	background: url('../img/sug-item4.png') no-repeat;
+}
+.suggest-item-img-5 {
+	width: 286px;
+	height: 408px;
+	background: url('../img/sug-item5.png') no-repeat;
+}
+.suggest-item-img-6 {
+	width: 286px;
+	height: 408px;
+	background: url('../img/sug-item6.png') no-repeat;
+}
+.suggest-item-img-7 {
+	width: 286px;
+	height: 408px;
+	background: url('../img/sug-item7.png') no-repeat;
+}
+.suggest-cloth .suggest-cloth-img-1{
+	width: 408px;
+	height: 537px;
+	background: url('../img/suggest-item-1.png') no-repeat;	
+}
+.suggest-cloth  .suggest-cloth-img-2{
+	width: 408px;
+	height: 537px;
+	background: url('../img/sugguest-item-2.png') no-repeat;	
+}
+
+
 .wheel-bk{
 	width: 340px;
 	height: 340px;
@@ -321,7 +369,7 @@ body{
 .suggest-item .suggest-item-img{
 	width: 286px;
 	height: 408px;
-	background: url('../img/suggest-item.png') no-repeat;
+	/*background: url('../img/suggest-item.png') no-repeat;*/
 }
 .suggest-cloth{
 	width: 408px;
@@ -334,7 +382,7 @@ body{
 .suggest-cloth .suggest-cloth-img{
 	width: 408px;
 	height: 537px;
-	background: url('../img/suggest-cloth.png') no-repeat;
+	/*background: url('../img/suggest-cloth.png') no-repeat;*/
 }
 .footer.con{
 	height: 95px;

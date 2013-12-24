@@ -1,3 +1,4 @@
+@import 'nib'
 
 @keyframes ballup
 	0% {	top: -703px}
@@ -54,6 +55,203 @@
 	to {
 		opacity:1
 	}
+@keyframes mc1 
+	from {
+		transform:translate3d(63%, 0px,0)
+	}
+	to {
+		transform:translate3d(63%, 1000px,0)
+	}
+@keyframes mc2
+	from {
+		transform:translate3d(16%, 0px,0)
+	}
+	to {
+		transform:translate3d(16%, 1000px,0)
+	}
+
+@keyframes mc3
+	from {
+		transform:translate3d(20%, 0px,0)
+	}
+	to {
+		transform:translate3d(20%, 1000px,0)
+	}
+
+@keyframes mc4
+	from {
+		transform:translate3d(70%, 0px,0)
+	}
+	to {
+		transform:translate3d(70%, 1000px,0)
+	}
+
+@keyframes mc5
+	from {
+		transform:translate3d(60%, 0px,0)
+	}
+	to {
+		transform:translate3d(60%, 1000px,0)
+	}
+
+@keyframes mc6
+	0% {
+		// translate(50%, 50%) rotate(90deg)
+		transform:rotateY(0deg) translate3d(65%, 0px,0)
+	}
+
+	50%{
+		transform:rotateY(180deg) translate3d(30%, 300px,0)
+	}
+	100% {
+		transform:rotateY(360deg) translate3d(65%, 1000px,0)
+	}
+
+@keyframes mc7
+	from {
+		transform:translate3d(50%, 0px,0)
+	}
+	to {
+		transform:translate3d(50%, 1000px,0)
+	}
+
+@keyframes mc8
+	0%{
+		transform:translate3d(40%, 0px,0)
+	}
+	40%{
+		transform:translate3d(40%, 100px,0)
+	}
+	100%{
+		transform:translate3d(40%, 1000px,0)
+	}
+
+@keyframes mc9
+	from {
+		transform:rotateY(0deg) translate3d(55%, 0px,0)
+	}
+	to {
+		transform:rotateY(1000deg) translate3d(55%, 1000px,0)
+	}
+
+@keyframes mc10
+	0%{
+		transform:translate3d(55%, 0px,0)
+	}
+	60%{
+		transform:translate3d(55%, 300px,0)
+	}
+	100% {
+		transform:translate3d(55%, 1000px,0)
+	}
+@keyframes mc11
+	from {
+		transform:translate3d(55%, 0px,0)
+	}
+	to {
+		transform:translate3d(55%, 1000px,0)
+	}
+
+@keyframes mc12
+	from {
+		transform:rotateY(0deg) translate3d(20%, 0px,0)
+	}
+	to {
+		transform:rotateY(960deg) translate3d(20%, 1000px,0)
+	}
+@keyframes mc13
+	from {
+		transform:rotateY(0deg) translate3d(20%, 0px,0)
+	}
+	to {
+		transform:rotateY(960deg) translate3d(20%, 1000px,0)
+	}
+@keyframes mc14
+	from {
+		transform:rotateY(0deg) translate3d(40%, 0px,0)
+	}
+	to {
+		transform:rotateY(960deg) translate3d(40%, 1000px,0)
+	}
+@keyframes mc15
+	from {
+		transform:rotateY(0deg) translate3d(50%, 0px,0)
+	}
+	to {
+		transform:rotateY(960deg) translate3d(50%, 1000px,0)
+	}
+@keyframes mc16
+	from {
+		transform:rotateY(0deg) translate3d(60%, 0px,0)
+	}
+	to {
+		transform:rotateY(960deg) translate3d(60%, 1000px,0)
+	}
+@keyframes mc17
+
+	from {
+		transform:rotateY(0deg) translate3d(70%, 0px,0)
+	}
+	to {
+		transform:rotateY(960deg) translate3d(70%, 1000px,0)
+	}
+
+@keyframes ma1
+	from {
+		transform:rotateY(0deg) translate3d(25%, 0px,0)
+	}
+	to {
+		transform:rotateY(960deg) translate3d(25%, 1000px,0)
+	}
+
+@keyframes ma2
+	0% {
+		transform:rotateY(0deg) translate3d(30%, 0px,0)
+	}
+	70% {
+		transform:rotateY(960deg) translate3d(30%, 250px,0)
+	}
+	100% {
+		transform:translate3d(30%, 1000px,0)
+	}
+
+@keyframes ma3
+	from {
+		transform:translate3d(40%, 0px,0)
+	}
+	to {
+		transform:translate3d(40%, 1000px,0)
+	}
+
+@keyframes ma4
+	from {
+		transform:rotateY(0deg) translate3d(60%, 0px,0)
+	}
+	to {
+		transform:rotateY(960deg) translate3d(60%, 1000px,0)
+	}
+
+@keyframes ma5
+	from {
+		transform:rotateY(0deg) translate3d(70%, 0px,0)
+	}
+	to {
+		transform:rotateY(1200deg) translate3d(70%, 1000px,0)
+	}
+
+@keyframes ma6
+	0% {transform:translate3d(50%, 0px,0)}
+	55% {transform:translate3d(50%, 400px,0)}
+	100% {transform:translate3d(50%, 1000px,0)}
+
+@keyframes ma7
+	0% {transform:translate3d(45%, 0px,0)}
+	50% {transform:translate3d(55%, 200px,0)}
+	100% {transform:translate3d(45%, 1000px,0)}
+@keyframes ma8
+	0% {transform:translate3d(55%, 0px,0)}
+	70% {transform:translate3d(55%, 400px,0)}
+	100% {transform:translate3d(55%, 1000px,0)}
 
 .lucky-ball-up	
 	animation:ballup ease 3s
@@ -90,7 +288,254 @@ section
 
 .ror 
 	animation: rotationthis 24s linear infinite
-
+  
 .bktransition
-	background: url('../img/BG2.jpg') repeat center -25px 
+	// background: url('../img/BG2.jpg') repeat center -25px 
 	animation: bktrans 3s linear
+
+.m1
+	position:absolute
+	width:90px
+	height:141px
+	left:63%
+	top:-250px
+	background:url('../img/m1.png') 
+	animation:mc1 3s linear
+	
+.m2
+	position:absolute
+	width:90px
+	height:141px
+	background:url('../img/m1.png') 
+	left:16%
+	top:-250px
+	// bottom:1000px
+	animation:mc2 3s ease
+
+.m3
+	position:absolute
+	width:90px
+	height:141px
+	background:url('../img/m1.png') 
+	left:20%
+	top:-250px
+	// bottom:1000px
+	animation:mc3 3s linear
+
+.m4
+	position:absolute
+	width:90px
+	height:141px
+	background:url('../img/m1.png') 
+	left:70%
+	top:-250px
+	// bottom:1000px
+	animation:mc4 3s ease-in-out
+
+.m5
+	position:absolute
+	width:90px
+	height:141px
+	background:url('../img/m1.png') 
+	left:60%
+	top:-250px
+	// bottom:1000px
+	animation:mc5 3s ease
+
+.m6
+	position:absolute
+	width:90px
+	height:141px
+	background:url('../img/m1.png') 
+	left:65%
+	top:-250px
+	// bottom:1000px
+	animation:mc6 3s ease-in
+.m7
+	position:absolute
+	width:90px
+	height:141px
+	background:url('../img/m1.png') 
+	left:50%
+	top:-250px
+	// bottom:1000px
+	animation:mc7 3s ease-in
+
+.m8
+	position:absolute
+	width:90px
+	height:141px
+	background:url('../img/m1.png') 
+	left:40%
+	top:-250px
+	// bottom:1000px
+	animation:mc8 3s ease
+
+.m9
+	position:absolute
+	width:90px
+	height:141px
+	background:url('../img/m1.png') 
+	left:55%
+	top:-250px
+	// bottom:1000px
+	animation:mc9 3s ease-out
+
+.m10
+	position:absolute
+	width:90px
+	height:141px
+	background:url('../img/m1.png') 
+	left:35%
+	top:-250px
+	// bottom:1000px
+	animation:mc10 3s ease-in
+
+.m11
+	position:absolute
+	width:90px
+	height:141px
+	background:url('../img/m1.png') 
+	left:30%
+	top:-250px
+	// bottom:1000px
+	animation:mc11 3s linear
+
+.m12
+	position:absolute
+	width:90px
+	height:141px
+	background:url('../img/m1.png') 
+	left:20%
+	top:-250px
+	// bottom:1000px
+	animation:mc12 3s ease
+
+.m13
+	position:absolute
+	width:90px
+	height:141px
+	background:url('../img/m1.png') 
+	left:20%
+	top:-250px
+	// bottom:1000px
+	animation:mc12 3s ease
+.m14
+	position:absolute
+	width:90px
+	height:141px
+	background:url('../img/m1.png') 
+	left:40%
+	top:-250px
+	// bottom:1000px
+	animation:mc12 3s ease-in
+.m15
+	position:absolute
+	width:90px
+	height:141px
+	background:url('../img/m1.png') 
+	left:50%
+	top:-250px
+	// bottom:1000px
+	animation:mc12 3s linear
+
+.m16
+	position:absolute
+	width:90px
+	height:141px
+	background:url('../img/m1.png') 
+	left:60%
+	top:-250px
+	// bottom:1000px
+	animation:mc12 3s ease-in
+
+.m17
+	position:absolute
+	width:90px
+	height:141px
+	background:url('../img/m1.png') 
+	left:70%
+	top:-250px
+	// bottom:1000px
+	animation:mc12 3s ease-in
+
+.ma1
+	position:absolute
+	width:99px
+	height:139px
+	background:url('../img/m5.png') 
+	left:25%
+	top:-250px
+	// bottom:1000px
+	animation:ma1 3s linear
+
+.ma2
+	position:absolute
+	width:99px
+	height:139px
+	background:url('../img/m5.png') 
+	left:30%
+	top:-250px
+	// bottom:1000px
+	animation:ma2 3s ease-in
+
+.ma3
+	position:absolute
+	width:99px
+	height:139px
+	background:url('../img/m5.png') 
+	left:40%
+	top:-250px
+	// bottom:1000px
+	animation:ma3 3s ease-out
+
+.ma4
+	position:absolute
+	width:99px
+	height:139px
+	background:url('../img/m5.png') 
+	left:60%
+	top:-250px
+	// bottom:1000px
+	animation:ma4 3s linear
+
+.ma5
+	position:absolute
+	width:99px
+	height:139px
+	background:url('../img/m5.png') 
+	left:70%
+	top:-250px
+	// bottom:1000px
+	animation:ma5 3s ease-in
+
+.ma6
+	position:absolute
+	width:99px
+	height:139px
+	background:url('../img/m5.png') 
+	left:50%
+	top:-250px
+	// bottom:1000px
+	animation:ma6 3s ease-in-out
+
+.ma7
+	position:absolute
+	width:99px
+	height:139px
+	background:url('../img/m5.png') 
+	left:45%
+	top:-250px
+	// bottom:1000px
+	animation:ma7 3s ease-in-out
+
+.ma8
+	position:absolute
+	width:99px
+	height:139px
+	background:url('../img/m5.png') 
+	left:55%
+	top:-250px
+	// bottom:1000px
+	animation:ma8 3s ease-in-out
+

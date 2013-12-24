@@ -5,7 +5,7 @@ init =
 	voted: 0
 
 game = 
-	array:['good1' 'good2' 'nice1' 'nice2' 'nice3' 'oops' 'soso1' 'soso2']
+	array:['best' 'better' 'bravo' 'good' 'ok1' 'ok2' 'oops' 'soso']
 	go: (r)->
 		window.location.href = 'content-'+@array[r]+'.html'
 	init: ->
@@ -63,12 +63,26 @@ const loginfb = ->
 	else
 		game.play()
 const postfb = ->
+	# desp = document.ge
+	# meta[name=description]
+	metas = document.getElementsByTagName('meta')
+	console.log(metas)
+	for i from 0 to metas.length-1 by 1
+		console.log(metas[i].getAttribute("property"))
+		if (metas[i].getAttribute("property") == "og:description") 
+			mdesp = metas[i].getAttribute("content")
+		if (metas[i].getAttribute("property") == "og:title") 
+			mtitle = metas[i].getAttribute("content")
+			console.log(mtitle)		
+		if (metas[i].getAttribute("property") == "og:url") 
+			murl = metas[i].getAttribute("content")
+	
 	FB.ui(
 		method:'feed'
-		name: '123'
-		link: 'https://kktix.com/events/devhappyday'
-		caption: '123'
-		description: '1232312312312'		
+		name: mtitle
+		link: murl
+		caption: ''
+		description: mdesp
 	(resp)->
 		console.log(resp)
 	)
@@ -163,7 +177,7 @@ if content-value.value == 'content'
 	myFunction = ->
 		myVar = setTimeout(
 			->
-				# fb.post() 
+				fb.post() 
 		2000
 		)		
 	myStopFunction = ->

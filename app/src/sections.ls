@@ -33,7 +33,7 @@ page.section 0, (section) !->
 			key: 'opacity'
 			start: 140
 			end: 150 
-			from: .8
+			from: \.8
 			to: 0
 			format: '%s' 
 			target: bg_3
