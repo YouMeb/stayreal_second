@@ -1,7 +1,7 @@
 
 page = window.page = sections.create()
 
-console.log page
+# console.log pages
 page.section 0, (section) !->
 	# console.log(section)
 	# console.log \123

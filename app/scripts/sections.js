@@ -1,7 +1,6 @@
 (function(){
   var page;
   page = window.page = sections.create();
-  console.log(page);
   page.section(0, function(section){
     var luckyballtop, bg_3, bg_2;
     luckyballtop = document.querySelector('.lucky-ball-up');

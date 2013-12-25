@@ -311,6 +311,11 @@ body{
 	height: 408px;
 	background: url('../img/sug-item7.png') no-repeat;
 }
+.suggest-item-img-8 {
+	width: 286px;
+	height: 408px;
+	background: url('../img/sug-item8.png') no-repeat;
+}
 .suggest-cloth .suggest-cloth-img-1{
 	width: 408px;
 	height: 537px;
