@@ -4,8 +4,6 @@
   console.log(page);
   page.section(0, function(section){
     var luckyballtop, bg_3, bg_2;
-    console.log(section);
-    console.log('123');
     luckyballtop = document.querySelector('.lucky-ball-up');
     bg_3 = document.querySelector('.bg_3');
     bg_2 = document.querySelector('.bg_2');
@@ -47,8 +45,6 @@
   });
   page.section(1, function(section){
     var item, cloth, lucky, nActi, nShop, bg_2;
-    console.log(section);
-    console.log('123');
     item = document.querySelector('.suggest-item');
     cloth = document.querySelector('.suggest-cloth');
     lucky = document.querySelector('.lucky-result-div');

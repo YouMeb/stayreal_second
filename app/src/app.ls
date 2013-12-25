@@ -41,11 +41,11 @@ const loginfb = ->
 			if(res.authResponse)
 				FB.api('/me', (response) !->
 					init.login = 1
-					console.log(response)	
+					# console.log(response)	
 					if(!response.verified)
 						alert('很抱歉你的帳號未通過驗證！再試一次')
 					FB.getLoginStatus((_resp) ->
-						console.log(_resp)
+						# console.log(_resp)
 						if (_resp.status === 'connected') 
 							uid = _resp.authResponse.userID
 							accessToken = _resp.authResponse.accessToken
@@ -66,14 +66,14 @@ const postfb = ->
 	# desp = document.ge
 	# meta[name=description]
 	metas = document.getElementsByTagName('meta')
-	console.log(metas)
+	# console.log(metas)
 	for i from 0 to metas.length-1 by 1
-		console.log(metas[i].getAttribute("property"))
+		# console.log(metas[i].getAttribute("property"))
 		if (metas[i].getAttribute("property") == "og:description") 
 			mdesp = metas[i].getAttribute("content")
 		if (metas[i].getAttribute("property") == "og:title") 
 			mtitle = metas[i].getAttribute("content")
-			console.log(mtitle)		
+			# console.log(mtitle)		
 		if (metas[i].getAttribute("property") == "og:url") 
 			murl = metas[i].getAttribute("content")
 	
@@ -83,8 +83,6 @@ const postfb = ->
 		link: murl
 		caption: ''
 		description: mdesp
-	(resp)->
-		console.log(resp)
 	)
 	# console.log(fb.at)
 	# xhr = new XMLHttpRequest()
@@ -115,7 +113,7 @@ const postpicfb = ->
 
 
 const drawfb = ->
-	console.log(fb.at)
+	# console.log(fb.at)
 	xhr = new XMLHttpRequest()
 	xhr.onload = resp
 	xhr.open(

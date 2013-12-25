@@ -54,13 +54,11 @@
         if (res.authResponse) {
           return FB.api('/me', function(response){
             init.login = 1;
-            console.log(response);
             if (!response.verified) {
               alert('很抱歉你的帳號未通過驗證！再試一次');
             }
             FB.getLoginStatus(function(_resp){
               var uid, accessToken;
-              console.log(_resp);
               if (deepEq$(_resp.status, 'connected', '===')) {
                 uid = _resp.authResponse.userID;
                 accessToken = _resp.authResponse.accessToken;
@@ -84,16 +82,13 @@
   postfb = function(){
     var metas, i$, to$, i, mdesp, mtitle, murl;
     metas = document.getElementsByTagName('meta');
-    console.log(metas);
     for (i$ = 0, to$ = metas.length - 1; i$ <= to$; ++i$) {
       i = i$;
-      console.log(metas[i].getAttribute("property"));
       if (metas[i].getAttribute("property") === "og:description") {
         mdesp = metas[i].getAttribute("content");
       }
       if (metas[i].getAttribute("property") === "og:title") {
         mtitle = metas[i].getAttribute("content");
-        console.log(mtitle);
       }
       if (metas[i].getAttribute("property") === "og:url") {
         murl = metas[i].getAttribute("content");
@@ -105,8 +100,6 @@
       link: murl,
       caption: '',
       description: mdesp
-    }, function(resp){
-      return console.log(resp);
     });
   };
   postpicfb = function(){
@@ -125,7 +118,6 @@
   };
   drawfb = function(){
     var xhr;
-    console.log(fb.at);
     xhr = new XMLHttpRequest();
     xhr.onload = resp;
     xhr.open('POST', 'https://graph.facebook.com/me/stayrealxkitty:draw?access_token=' + fb.at + '&method=POST&lucky_stick=http%3A%2F%2Fsamples.ogp.me%2F220274168145164', true);

@@ -3,8 +3,8 @@ page = window.page = sections.create()
 
 console.log page
 page.section 0, (section) !->
-	console.log(section)
-	console.log \123
+	# console.log(section)
+	# console.log \123
 
 	luckyballtop = document.querySelector '.lucky-ball-up'
 	bg_3 = document.querySelector '.bg_3'
@@ -49,8 +49,8 @@ page.section 0, (section) !->
 		}
 	]
 page.section 1, (section) !->
-	console.log(section)
-	console.log \123
+	# console.log(section)
+	# console.log \123
 	item = document.querySelector '.suggest-item'
 	cloth = document.querySelector '.suggest-cloth'
 	lucky = document.querySelector '.lucky-result-div'
