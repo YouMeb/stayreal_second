@@ -178,7 +178,7 @@ if content-value.value == 'content'
 			accessToken = _resp.authResponse.accessToken
 			fb.at = accessToken	
 		else
-			false
+			window.location.href="/2014kitty"
 	)
 	loadingfn = ->
 		lfn = setTimeout(
