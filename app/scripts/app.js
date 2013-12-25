@@ -80,7 +80,7 @@
     }
   };
   postfb = function(){
-    var metas, i$, to$, i, mdesp, mtitle, murl;
+    var metas, i$, to$, i, mdesp, mtitle, murl, mimage;
     metas = document.getElementsByTagName('meta');
     for (i$ = 0, to$ = metas.length - 1; i$ <= to$; ++i$) {
       i = i$;
@@ -93,12 +93,16 @@
       if (metas[i].getAttribute("property") === "og:url") {
         murl = metas[i].getAttribute("content");
       }
+      if (metas[i].getAttribute("property") === "og:image") {
+        mimage = metas[i].getAttribute("content");
+      }
     }
     return FB.ui({
       method: 'feed',
       name: mtitle,
       link: murl,
       caption: '',
+      picture: mimage,
       description: mdesp
     });
   };
