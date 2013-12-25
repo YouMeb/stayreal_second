@@ -46,7 +46,7 @@ const loginfb = ->
 						alert('很抱歉你的帳號未通過驗證！再試一次')
 					FB.getLoginStatus((_resp) ->
 						# console.log(_resp)
-						if (_resp.status === 'connected') 
+						if (_resp.status == 'connected') 
 							uid = _resp.authResponse.userID
 							accessToken = _resp.authResponse.accessToken
 							# console.log(accessToken)
