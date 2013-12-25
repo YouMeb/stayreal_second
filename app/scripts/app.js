@@ -1,5 +1,5 @@
 (function(){
-  var fbAppId, init, game, fb, initfb, loginfb, postfb, postpicfb, drawfb, resp, $post, $login, $draw, $postpic, $year, $month, $day, contentValue, myFunction, myStopFunction;
+  var fbAppId, init, game, fb, initfb, loginfb, postfb, postpicfb, drawfb, resp, $post, $login, $draw, $postpic, $year, $month, $day, contentValue, loading, b1, b2, b3, b4, b5, myFunction, myStopFunction;
   fbAppId = '219756031530311';
   init = {
     login: 0,
@@ -142,6 +142,12 @@
   $month = document.getElementById('month') || '';
   $day = document.getElementById('day') || '';
   contentValue = document.getElementById('content-value');
+  loading = document.querySelector('.frloading');
+  b1 = document.querySelector('.b1');
+  b2 = document.querySelector('.b2');
+  b3 = document.querySelector('.b3');
+  b4 = document.querySelector('.b4');
+  b5 = document.querySelector('.b5');
   fb.init();
   if ($login) {
     $login.onclick = function(){
@@ -177,8 +183,13 @@
     myFunction = function(){
       var myVar;
       return myVar = setTimeout(function(){
-        return fb.post();
-      }, 2000);
+        b1.className = b1.className + ' b1c';
+        b2.className = b2.className + ' b2c';
+        b3.className = b3.className + ' b3c';
+        b4.className = b4.className + ' b4c';
+        b5.className = b5.className + ' b5c';
+        return loading.className = loading.className + ' loadingclose';
+      }, 1000);
     };
     myStopFunction = function(){
       return clearTimeout(myVar);

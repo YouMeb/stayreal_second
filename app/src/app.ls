@@ -142,6 +142,14 @@ $day = document.getElementById('day') || ''
 
 content-value = document.getElementById('content-value')
 
+loading = document.querySelector('.frloading')
+b1 = document.querySelector('.b1')
+b2 = document.querySelector('.b2')
+b3 = document.querySelector('.b3')
+b4 = document.querySelector('.b4')
+b5 = document.querySelector('.b5')
+
+
 # year = $year.options[$year.selectedIndex].value
 # month = $month.options[$month.selectedIndex].value
 # day = $day.options[$day.selectedIndex].value
@@ -177,8 +185,14 @@ if content-value.value == 'content'
 	myFunction = ->
 		myVar = setTimeout(
 			->
-				fb.post() 
-		2000
+				# fb.post() 
+				b1.className = b1.className + ' b1c'
+				b2.className = b2.className + ' b2c'
+				b3.className = b3.className + ' b3c'
+				b4.className = b4.className + ' b4c'
+				b5.className = b5.className + ' b5c'
+				loading.className = loading.className+' loadingclose'
+		1000
 		)		
 	myStopFunction = ->
 		clearTimeout(myVar)

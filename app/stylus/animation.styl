@@ -253,6 +253,45 @@
 	70% {transform:translate3d(55%, 400px,0)}
 	100% {transform:translate3d(55%, 1000px,0)}
 
+@keyframes b1 
+	0% {transform:scale(0.8)}
+	20% {transform:scale(1)}
+
+@keyframes b2
+	20% {transform:scale(0.8)}
+	40% {transform:scale(1)}
+
+@keyframes b3 
+	40% {transform:scale(0.8)}
+	60% {transform:scale(1)}
+
+@keyframes b4 
+	60% {transform:scale(0.8)}
+	80% {transform:scale(1)}
+
+@keyframes b5 
+	80% {transform:scale(0.8)}
+	100% {transform:scale(1)}
+
+@keyframes close
+	from {
+		// transform:rotateY(0deg)
+		opacity:1
+	}
+	to {
+		// transform:rotateY(1200deg) 
+		opacity:0
+	}
+@keyframes bclose
+	from {
+		transform:rotateY(0deg)
+		// opacity:1
+	}
+	to {
+		transform:rotateY(1200deg) 
+		// opacity:0
+	}
+
 .lucky-ball-up	
 	animation:ballup ease 3s
 
@@ -539,3 +578,62 @@ section
 	// bottom:1000px
 	animation:ma8 3s ease-in-out
 
+.b1
+	animation: b1 .5s infinite alternate
+	width:150px
+	height:150px
+	background:url('../img/b1.png')
+
+.b2
+	animation: b2 .5s infinite alternate
+	width:150px
+	height:150px
+	background:url('../img/b2.png')
+
+.b3
+	animation: b3 .5s infinite alternate
+	width:150px
+	height:150px
+	background:url('../img/b3.png')
+
+.b4
+	animation: b4 .5s infinite alternate
+	width:150px
+	height:150px
+	background:url('../img/b4.png')
+
+.b5
+	animation: b5 .5s infinite alternate
+	width:150px
+	height:150px
+	background:url('../img/b5.png')
+
+.loading
+	display:inline-block
+
+.frloading
+	z-index:10
+	width:766px
+	height:154px
+	left:50%
+	top:50%
+	margin-left:-383px
+	margin-top:-77px
+	// transform:translate3d(-383px,-77px,0)
+	position:absolute
+
+.loadingclose
+	animation: close 2s ease-in
+	// display:none
+	opacity:0
+
+.b1c
+	animation: bclose 2s ease-in
+.b2c
+	animation: bclose 2s ease-in
+.b3c
+	animation: bclose 2s ease-in
+.b4c
+	animation: bclose 2s ease-in
+.b5c
+	animation: bclose 2s ease-in
