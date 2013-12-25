@@ -51,12 +51,14 @@ page.section 0, (section) !->
 page.section 1, (section) !->
 	# console.log(section)
 	# console.log \123
+	console.log(section)
 	item = document.querySelector '.suggest-item'
 	cloth = document.querySelector '.suggest-cloth'
 	lucky = document.querySelector '.lucky-result-div'
 	n-acti = document.querySelector '.n-acti'
 	n-shop = document.querySelector '.n-shop'
 	bg_2 = document.querySelector '.bg_2'
+	
 	section.transitions [
 		{
 			key: 'left'

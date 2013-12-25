@@ -44,6 +44,7 @@
   });
   page.section(1, function(section){
     var item, cloth, lucky, nActi, nShop, bg_2;
+    console.log(section);
     item = document.querySelector('.suggest-item');
     cloth = document.querySelector('.suggest-cloth');
     lucky = document.querySelector('.lucky-result-div');
