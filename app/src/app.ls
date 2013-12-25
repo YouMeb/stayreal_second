@@ -173,6 +173,7 @@ if($postpic)
 
 if content-value.value == 'content'
 	FB.getLoginStatus((_resp) ->
+		console.log(_resp)
 		if (_resp.status == 'connected') 
 			uid = _resp.authResponse.userID
 			accessToken = _resp.authResponse.accessToken
@@ -190,7 +191,6 @@ if content-value.value == 'content'
 				b4.className = b4.className + ' b4c'
 				b5.className = b5.className + ' b5c'
 				loading.className = loading.className+' loadingclose'
-				myStopFunction()
 		1000
 		)
 	autosharefn = ->
@@ -198,7 +198,6 @@ if content-value.value == 'content'
 			->
 				# alert 123
 				fb.post() 
-				myStopFunction()
 		10000
 		)
 
