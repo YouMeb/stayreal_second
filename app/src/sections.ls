@@ -51,7 +51,7 @@ page.section 0, (section) !->
 page.section 1, (section) !->
 	# console.log(section)
 	# console.log \123
-	console.log(section)
+	# console.log(section)
 	item = document.querySelector '.suggest-item'
 	cloth = document.querySelector '.suggest-cloth'
 	lucky = document.querySelector '.lucky-result-div'

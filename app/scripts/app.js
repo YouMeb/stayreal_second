@@ -169,7 +169,7 @@
         accessToken = _resp.authResponse.accessToken;
         return fb.at = accessToken;
       } else {
-        return false;
+        return window.location.href = "/2014kitty";
       }
     });
     loadingfn = function(){
@@ -180,16 +180,14 @@
         b3.className = b3.className + ' b3c';
         b4.className = b4.className + ' b4c';
         b5.className = b5.className + ' b5c';
-        loading.className = loading.className + ' loadingclose';
-        return myStopFunction();
+        return loading.className = loading.className + ' loadingclose';
       }, 1000);
     };
     autosharefn = function(){
       var afn;
       return afn = setTimeout(function(){
-        fb.post();
-        return myStopFunction();
-      }, 10000);
+        return fb.post();
+      }, 8000);
     };
     myStopFunction = function(){
       clearTimeout(lfn);

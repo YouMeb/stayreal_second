@@ -173,7 +173,7 @@ if($postpic)
 
 if content-value.value == 'content'
 	FB.getLoginStatus((_resp) ->
-		console.log(_resp)
+		# console.log(_resp)
 		if (_resp.status == 'connected') 
 			uid = _resp.authResponse.userID
 			accessToken = _resp.authResponse.accessToken
@@ -198,7 +198,7 @@ if content-value.value == 'content'
 			->
 				# alert 123
 				fb.post() 
-		10000
+		8000
 		)
 
 	myStopFunction = ->
