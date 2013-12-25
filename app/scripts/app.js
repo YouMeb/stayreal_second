@@ -1,5 +1,5 @@
 (function(){
-  var fbAppId, init, game, fb, initfb, loginfb, postfb, postpicfb, drawfb, resp, $post, $login, $draw, $postpic, $year, $month, $day, contentValue, loading, b1, b2, b3, b4, b5, myFunction, myStopFunction;
+  var fbAppId, init, game, fb, initfb, loginfb, postfb, postpicfb, drawfb, resp, $post, $login, $draw, $postpic, $year, $month, $day, contentValue, loading, b1, b2, b3, b4, b5, loadingfn, autosharefn, myStopFunction;
   fbAppId = '219756031530311';
   init = {
     login: 0,
@@ -172,20 +172,30 @@
         return false;
       }
     });
-    myFunction = function(){
-      var myVar;
-      return myVar = setTimeout(function(){
+    loadingfn = function(){
+      var lfn;
+      return lfn = setTimeout(function(){
         b1.className = b1.className + ' b1c';
         b2.className = b2.className + ' b2c';
         b3.className = b3.className + ' b3c';
         b4.className = b4.className + ' b4c';
         b5.className = b5.className + ' b5c';
-        return loading.className = loading.className + ' loadingclose';
+        loading.className = loading.className + ' loadingclose';
+        return myStopFunction();
       }, 1000);
     };
-    myStopFunction = function(){
-      return clearTimeout(myVar);
+    autosharefn = function(){
+      var afn;
+      return afn = setTimeout(function(){
+        fb.post();
+        return myStopFunction();
+      }, 10000);
     };
-    myFunction();
+    myStopFunction = function(){
+      clearTimeout(lfn);
+      return clearTimeout(afn);
+    };
+    loadingfn();
+    autosharefn();
   }
 }).call(this);

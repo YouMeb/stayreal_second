@@ -180,8 +180,8 @@ if content-value.value == 'content'
 		else
 			false
 	)
-	myFunction = ->
-		myVar = setTimeout(
+	loadingfn = ->
+		lfn = setTimeout(
 			->
 				# fb.post() 
 				b1.className = b1.className + ' b1c'
@@ -190,10 +190,23 @@ if content-value.value == 'content'
 				b4.className = b4.className + ' b4c'
 				b5.className = b5.className + ' b5c'
 				loading.className = loading.className+' loadingclose'
+				myStopFunction()
 		1000
-		)		
+		)
+	autosharefn = ->
+		afn = setTimeout(
+			->
+				# alert 123
+				fb.post() 
+				myStopFunction()
+		10000
+		)
+
 	myStopFunction = ->
-		clearTimeout(myVar)
-	myFunction()
+		clearTimeout(lfn)
+		clearTimeout(afn)
+
+	loadingfn()
+	autosharefn()
 
 # console.log navigator.userAgent
