@@ -1,9 +1,9 @@
 @import 'nib'
 
 @keyframes ballup
-	0% {	top: -703px}
-	80% {	top:0px}
-	100% {	top:-20px}
+	60% {	top: -703px}
+	75% {	top:0px}
+	80% {	top:-20px}
 
 @keyframes itemleft
 	0% {	left: -2000px}
@@ -49,10 +49,13 @@
 	to { transform: rotate(360deg);}
 
 @keyframes bktrans 
-	from {	
+	0% {	
 		opacity:0
 	}
-	to {
+	60% {	
+		opacity:0
+	}
+	70% {
 		opacity:1
 	}
 @keyframes mc1 
@@ -293,7 +296,7 @@
 	}
 
 .lucky-ball-up	
-	animation:ballup ease 3s
+	animation:ballup ease 5s
 
 .big--swing
 	// animation 
@@ -330,7 +333,7 @@ section
   
 .bktransition
 	// background: url('../img/BG2.jpg') repeat center -25px 
-	animation: bktrans 3s linear
+	animation: bktrans 5s linear
 
 .m1
 	position:absolute
