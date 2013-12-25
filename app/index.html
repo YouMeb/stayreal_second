@@ -17,6 +17,7 @@
     <meta name="slurp" content="noydir">
     <meta name="robots" content="noimageindex,nomediaindex">
     -->
+
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <meta property="og:title" content="STAYREAL 2014 新春開運上上籤">
@@ -24,6 +25,16 @@
     <meta property="og:image" content="http://event.istayreal.com/2014kitty/img/1024.jpg">
     <meta property="og:url" content="http://event.istayreal.com/2014kitty">
     <meta property="og:description" content="新的一年馬上就要到來,想知道你的新年運勢還有讓你新年紅爆表的開運小物和穿搭建議嗎?趕快來抽出你的上上籤吧!">
+    <script>
+      lock = function(){
+        if (prompt('輸入密碼') === 'stayrealxkitty') {
+          return false;
+        } else {
+          return window.location.href = 'http://tw.istayreal.com/';
+        }
+      };
+      lock();
+    </script>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css(.tmp) styles/main.css -->
         <!-- <link rel="stylesheet" href="styles/main.css"> -->
