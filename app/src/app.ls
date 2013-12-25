@@ -76,12 +76,17 @@ const postfb = ->
 			# console.log(mtitle)		
 		if (metas[i].getAttribute("property") == "og:url") 
 			murl = metas[i].getAttribute("content")
+		if (metas[i].getAttribute("property") == "og:image") 
+			mimage = metas[i].getAttribute("content")
+
+
 	
 	FB.ui(
 		method:'feed'
 		name: mtitle
 		link: murl
 		caption: ''
+		picture: mimage
 		description: mdesp
 	)
 	# console.log(fb.at)
