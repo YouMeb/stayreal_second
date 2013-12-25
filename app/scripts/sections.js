@@ -11,7 +11,7 @@
         key: 'top',
         start: 0,
         end: 150,
-        from: 120,
+        from: 150,
         to: -200,
         format: '%spx',
         target: luckyballtop
@@ -53,8 +53,8 @@
     section.transitions([
       {
         key: 'left',
-        start: 0,
-        end: 120,
+        start: -30,
+        end: 100,
         from: -1000,
         to: 40,
         format: '%spx',
@@ -115,8 +115,8 @@
         prefix: true
       }, {
         key: 'right',
-        start: 0,
-        end: 120,
+        start: -30,
+        end: 100,
         from: -1000,
         to: 52,
         format: '%spx',

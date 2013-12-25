@@ -1,4 +1,4 @@
-.lucky-ball-up{-webkit-animation:ballup ease 5s;-moz-animation:ballup ease 5s;-o-animation:ballup ease 5s;-ms-animation:ballup ease 5s;animation:ballup ease 5s}
+.lucky-ball-up{-webkit-animation:ballup ease 5s;-moz-animation:ballup ease 5s;-o-animation:ballup ease 5s;-ms-animation:ballup ease 5s;animation:ballup ease 5s;top:0}
 .suggest--cloth--right{-webkit-animation:topittop ease 4s;-moz-animation:topittop ease 4s;-o-animation:topittop ease 4s;-ms-animation:topittop ease 4s;animation:topittop ease 4s}
 .suggest--item--left{-webkit-animation:itemleft ease 4s;-moz-animation:itemleft ease 4s;-o-animation:itemleft ease 4s;-ms-animation:itemleft ease 4s;animation:itemleft ease 4s}
 .topic--top{-webkit-animation:topictop ease 1s;-moz-animation:topictop ease 1s;-o-animation:topictop ease 1s;-ms-animation:topictop ease 1s;animation:topictop ease 1s}
@@ -49,19 +49,19 @@ section{-webkit-animation:sc ease 2s;-moz-animation:sc ease 2s;-o-animation:sc e
 .b5c{-webkit-animation:bclose 2s ease-in;-moz-animation:bclose 2s ease-in;-o-animation:bclose 2s ease-in;-ms-animation:bclose 2s ease-in;animation:bclose 2s ease-in}
 @-moz-keyframes ballup{60%{top:-703px}
 75%{top:0}
-80%{top:-20px}
+80%{top:0}
 }@-webkit-keyframes ballup{60%{top:-703px}
 75%{top:0}
-80%{top:-20px}
+80%{top:0}
 }@-o-keyframes ballup{60%{top:-703px}
 75%{top:0}
-80%{top:-20px}
+80%{top:0}
 }@-ms-keyframes ballup{60%{top:-703px}
 75%{top:0}
-80%{top:-20px}
+80%{top:0}
 }@keyframes ballup{60%{top:-703px}
 75%{top:0}
-80%{top:-20px}
+80%{top:0}
 }@-moz-keyframes itemleft{0%{left:-2000px}
 90%{left:60px}
 100%{left:40px}
