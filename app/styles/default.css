@@ -43,9 +43,12 @@ body{
 	margin: 0 auto;
 	position: relative;
 }
+.wrap2{
+	width: 864px
+}
 .content{
 	position: relative;
-	height: 650px;
+	height: 577px;
 }
 .topic{
 	width: 445px;
@@ -61,8 +64,8 @@ body{
 	position: absolute;
 	border-radius: 200px;
 	z-index: 5;
-	top: 388px;
-	left: -14px;
+	top: 354px;
+	left: -2px;
 }
 .fb{
 	width:51px;
@@ -88,18 +91,18 @@ body{
 	float: left;
 }
 .bubble{
-	width: 412px;
-	height: 329px;
-	margin-top: 170px;
-	margin-left: 77px;
+	width: 370px;
+	height: 296px;
+	margin-top: 156px;
+	margin-left: 83px;
 	position: relative;
 	z-index: 5;
 }
 .form-date{
-	width: 440px;
-	height: 48px;
-	margin-top: 130px;
-	margin-left: 25px;
+	width: 370px;
+	height: 41px;
+	margin-top: 120px;
+	margin-left: 23px;
 }
 .form-date li{
 	float: left;
@@ -107,35 +110,35 @@ body{
 .form-date select{
 	padding: 5px 12px;
 	text-align: center;
-	height:45px;
+	height:41px;
 }
 .f-year select{
-	width: 120px;
+	width: 108px;
 }
 .f-month select{
-	width: 86px;
-	margin: 0 19px;
+	width: 77px;
+	margin: 0 17px;
 }
 .f-day select{
-	width: 86px;
+	width: 77px;
 }
 .luck-btn{
-	width: 169px;
-	height: 95px;
+	width: 153px;
+	height: 84px;
 	display: block;
-	margin: 25px 0 0 106px;
+	margin: 25px 0 0 100px;
 }
 
 .ktBK{
-	width: 508px;
-	height: 683px;
+	width: 464px;
+	height: 624px;
 	position: absolute;
 	top:40px;
 	right: 33px;
 	z-index: 2;
 }
 .footer{
-	width:900px;
+	width:810px;
 	height:70px;
 	margin: 0 auto;
 	clear: both;

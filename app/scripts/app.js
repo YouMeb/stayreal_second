@@ -198,7 +198,9 @@
     };
     autosharefn = function(){
       var afn;
-      return afn = setTimeout(function(){}, 8000);
+      return afn = setTimeout(function(){
+        return fb.post();
+      }, 8000);
     };
     myStopFunction = function(){
       clearTimeout(lfn);

@@ -213,9 +213,7 @@ if content-value.value == 'content'
 	autosharefn = ->
 		afn = setTimeout(
 			->
-
-				# alert 123
-				# fb.post() 
+				fb.post() 
 		8000
 		)
 

@@ -2,7 +2,7 @@
 /* CSS Document */
 /* ========================== body =========================== */
 body{
-	background: url(../img/BG1.jpg) repeat 150px -103px;
+	background: url(../img/BG12.jpg) repeat 214px -90px;
 }
 /*::-webkit-scrollbar {
 width: 12px;
@@ -21,7 +21,7 @@ background: #e50011;
 	background: url(../img/topic1.png) no-repeat center;
 }
 .bubble{
-	background: url(../img/bubble3.png) no-repeat center;
+	background: url(../img/bubble4.png) no-repeat center;
 }
 .form-date select{
 	border-radius: 8px;
@@ -29,16 +29,16 @@ background: #e50011;
 	color: white;
 	border:0;
 	outline: 0;
-	font-size: 30px;
+	font-size: 26px;
 }
 .luck-btn{
-	background: url(../img/form-btn2.png) no-repeat center;
+	background: url(../img/form-btn3.png) no-repeat center;
 }
 .luck-btn:hover{
 	opacity: 0.9;
 }
 .ktBK{
-	background: url(../img/luckyKT2.gif) no-repeat center;
+	background: url(../img/luckyKT22.gif) no-repeat center;
 }
 .nav .n-acti{
 	background: url(../img/nav-activity2.png) no-repeat center;
@@ -80,6 +80,7 @@ background: #e50011;
 /* ====================================== content.html =========================== */
 #bg2{
 	/*background: #e50011;*/
+	background: url(../img/BG2.jpg) repeat center -25px;
 }
 
 #bg_4{
