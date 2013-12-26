@@ -294,7 +294,29 @@
 		transform:rotateY(1200deg) 
 		// opacity:0
 	}
-
+@keyframes scrolldown
+	from{
+		bottom:20px
+	}
+	to{
+		bottom:40px
+	}
+@keyframes scrollshow
+	0%{
+		opacity:0
+		transform:scale(3)rotateY(1500deg)
+	}
+	70%{
+		opacity:0
+		transform:scale(3)rotateY(1500deg)
+	}
+	80%{
+		opacity:1
+		transform:scale(3)rotateY(1200deg)
+	}
+	100%{
+		transform:scale(1)rotateY(0deg)
+	}
 .lucky-ball-up	
 	animation:ballup ease 5s
 	top:0
@@ -331,6 +353,7 @@ section
 
 .ror 
 	animation: rotationthis 24s linear infinite
+	transform:translate3d(0,0,-30)
   
 .bktransition
 	// background: url('../img/BG2.jpg') repeat center -25px 
@@ -617,7 +640,7 @@ section
 
 .frloading
 	z-index:10
-	width:766px
+	width:776px
 	height:154px
 	left:50%
 	top:50%
@@ -641,4 +664,20 @@ section
 	animation: bclose 2s ease-in
 .b5c
 	animation: bclose 2s ease-in
-
+.closeit 
+	display:none
+.lucky-result-div
+	transform:translateZ(0)
+.scrolldiv
+	width:44px
+	height:60px
+	right:20px
+	bottom:40px
+	position:fixed
+	// position:absolute
+	transform:translateZ(0)
+	background:url('../img/remind.png') 
+.scrolldiv.show.down
+	animation: scrolldown 1s infinite alternate
+.scrolldiv.show
+	animation: scrollshow 5s linear

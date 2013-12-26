@@ -1,5 +1,5 @@
 (function(){
-  var fbAppId, init, game, fb, initfb, loginfb, postfb, postpicfb, drawfb, resp, $post, $login, $draw, $postpic, $year, $month, $day, contentValue, loading, b1, b2, b3, b4, b5, loadingfn, autosharefn, myStopFunction;
+  var fbAppId, init, game, fb, initfb, loginfb, postfb, postpicfb, drawfb, resp, $post, $login, $draw, $postpic, $year, $month, $day, contentValue, loading, scrolldiv, b1, b2, b3, b4, b5, loadingfn, closeloading, autosharefn, myStopFunction;
   fbAppId = '219756031530311';
   init = {
     login: 0,
@@ -99,11 +99,12 @@
     }
     return FB.ui({
       method: 'feed',
-      name: mtitle,
+      name: '新春開運上上籤  2014運勢結果-' + mtitle,
       link: murl,
       caption: '',
       picture: mimage,
-      description: mdesp
+      description: mdesp,
+      massage: 'yoyoyoyoyo'
     });
   };
   postpicfb = function(){
@@ -139,6 +140,7 @@
   $day = document.getElementById('day') || '';
   contentValue = document.getElementById('content-value');
   loading = document.querySelector('.frloading');
+  scrolldiv = document.getElementById('scrolldiv');
   b1 = document.querySelector('.b1');
   b2 = document.querySelector('.b2');
   b3 = document.querySelector('.b3');
@@ -187,11 +189,16 @@
         return loading.className = loading.className + ' loadingclose';
       }, 1000);
     };
+    closeloading = function(){
+      var cfn;
+      return cfn = setTimeout(function(){
+        loading.className = loading.className + ' closeit';
+        scrolldiv.className = scrolldiv.className + ' down';
+      }, 5000);
+    };
     autosharefn = function(){
       var afn;
-      return afn = setTimeout(function(){
-        return fb.post();
-      }, 8000);
+      return afn = setTimeout(function(){}, 8000);
     };
     myStopFunction = function(){
       clearTimeout(lfn);
@@ -199,5 +206,6 @@
     };
     loadingfn();
     autosharefn();
+    closeloading();
   }
 }).call(this);

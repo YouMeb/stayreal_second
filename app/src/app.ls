@@ -1,5 +1,7 @@
 fbAppId = '219756031530311'
 
+# console.log(window.innerHeight)
+
 init = 	
 	login: 0
 	voted: 0
@@ -83,11 +85,12 @@ const postfb = ->
 	
 	FB.ui(
 		method:'feed'
-		name: mtitle
+		name: '新春開運上上籤  2014運勢結果-'+mtitle
 		link: murl
 		caption: ''
 		picture: mimage
 		description: mdesp
+		massage: 'yoyoyoyoyo'
 	)
 	# console.log(fb.at)
 	# xhr = new XMLHttpRequest()
@@ -146,12 +149,13 @@ $day = document.getElementById('day') || ''
 content-value = document.getElementById('content-value')
 
 loading = document.querySelector('.frloading')
+scrolldiv = document.getElementById('scrolldiv')
+
 b1 = document.querySelector('.b1')
 b2 = document.querySelector('.b2')
 b3 = document.querySelector('.b3')
 b4 = document.querySelector('.b4')
 b5 = document.querySelector('.b5')
-
 
 # year = $year.options[$year.selectedIndex].value
 # month = $month.options[$month.selectedIndex].value
@@ -198,11 +202,20 @@ if content-value.value == 'content'
 				loading.className = loading.className+' loadingclose'
 		1000
 		)
+	closeloading = ->
+		cfn = setTimeout(
+			!->
+				loading.className = loading.className + ' closeit'
+				# console.log(scrolldiv.className)
+				scrolldiv.className = scrolldiv.className + ' down'
+		5000
+		)
 	autosharefn = ->
 		afn = setTimeout(
 			->
+
 				# alert 123
-				fb.post() 
+				# fb.post() 
 		8000
 		)
 
@@ -212,5 +225,5 @@ if content-value.value == 'content'
 
 	loadingfn()
 	autosharefn()
-
+	closeloading()
 # console.log navigator.userAgent

@@ -1,6 +1,8 @@
 
 page = window.page = sections.create()
 
+_h = window.innerHeight
+
 # console.log pages
 page.section 0, (section) !->
 	# console.log(section)
@@ -63,7 +65,7 @@ page.section 1, (section) !->
 		{
 			key: 'left'
 			start: 0
-			end: 120 
+			end: 100 
 			from: -1000 
 			to: 40 
 			format: '%spx' 
@@ -72,7 +74,7 @@ page.section 1, (section) !->
 		{
 			key: 'opacity'
 			start: 80
-			end: 120 
+			end: 100 
 			from: 0.3 
 			to: 1 
 			format: '%s' 
@@ -82,37 +84,57 @@ page.section 1, (section) !->
 		{
 			key: 'transform'
 			start: 0
-			end: 120 
+			end: 100 
 			from: 0
 			to: 720
 			format: 'rotateY(%sdeg)' 
 			target: cloth
 			prefix: true
 		}
-		{
-			key: '-webkit-transform'
-			start: 0
-			end: 120 
-			from: 1
-			to: 1.1
-			format: 'scale(%s)' 
-			target: lucky
-			prefix: true
-		}
-		{
-			key: 'transform'
-			start: 0
-			end: 120 
-			from: 1
-			to: 1.1
-			format: 'scale(%s)' 
-			target: lucky
-			prefix: true
-		}
+		# {
+		# 	key: '-webkit-transform'
+		# 	start: 0
+		# 	end: 120 
+		# 	from: 1
+		# 	to: 1.1
+		# 	format: 'scale(%s)' 
+		# 	target: lucky
+		# 	prefix: true
+		# }
+		# {
+		# 	key: 'transform'
+		# 	start: 0
+		# 	end: 120 
+		# 	from: 1
+		# 	to: 1.1
+		# 	format: 'scale(%s)' 
+		# 	target: lucky
+		# 	prefix: true
+		# }
+		# {
+		# 	key: '-webkit-transform'
+		# 	start: 0
+		# 	end: 120 
+		# 	from: 1
+		# 	to: 1.1
+		# 	format: 'scale(%s) translateZ(0)' 
+		# 	target: lucky
+		# 	prefix: true
+		# }
+		# {
+		# 	key: 'transform'
+		# 	start: 0
+		# 	end: 120 
+		# 	from: 1
+		# 	to:1.1
+		# 	format: 'scale(%s) translateZ(0)' 
+		# 	target: lucky
+		# 	prefix: true
+		# }
 		{
 			key: '-ms-transform'
 			start: 0
-			end: 120 
+			end: 100 
 			from: 0
 			to: 720
 			format: 'rotateY(%sdeg)' 
@@ -122,7 +144,7 @@ page.section 1, (section) !->
 		{
 			key: '-webkit-transform'
 			start: 0
-			end: 120 
+			end: 100 
 			from: 0
 			to: 720
 			format: 'rotateY(%sdeg)' 
@@ -132,7 +154,7 @@ page.section 1, (section) !->
 		{
 			key: 'right'
 			start: 0
-			end: 120 
+			end: 100 
 			from: -1000 
 			to: 52
 			format: '%spx' 
@@ -142,7 +164,7 @@ page.section 1, (section) !->
 		{
 			key: 'opacity'
 			start: 80
-			end: 120 
+			end: 100 
 			from: 0.3
 			to: 1 
 			format: '%s' 
@@ -152,7 +174,7 @@ page.section 1, (section) !->
 		{
 			key: '-webkit-transform'
 			start: 0
-			end: 120 
+			end: 100 
 			from: 0
 			to: 720
 			format: 'rotateY(%sdeg)' 
@@ -162,7 +184,7 @@ page.section 1, (section) !->
 		{
 			key: '-ms-transform'
 			start: 0
-			end: 120 
+			end: 100 
 			from: 0
 			to: 720
 			format: 'rotateY(%sdeg)' 
@@ -172,7 +194,7 @@ page.section 1, (section) !->
 		{
 			key: 'transform'
 			start: 0
-			end: 120 
+			end: 100 
 			from: 0
 			to: 720
 			format: 'rotateY(%sdeg)' 
@@ -182,7 +204,7 @@ page.section 1, (section) !->
 		{
 			key: 'opacity'
 			start: 80
-			end: 120 
+			end: 100 
 			from: 0.3
 			to: 1 
 			format: '%s' 
@@ -211,4 +233,7 @@ page.section 1, (section) !->
 	]
 
 window.onload = -> 
+	section1 = document.querySelector('.section-1')
+	section2 = document.querySelector('.section-2')
 	page.init()
+	

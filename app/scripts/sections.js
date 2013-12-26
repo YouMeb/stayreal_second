@@ -1,6 +1,7 @@
 (function(){
-  var page;
+  var page, _h;
   page = window.page = sections.create();
+  _h = window.innerHeight;
   page.section(0, function(section){
     var luckyballtop, bg_3, bg_2;
     luckyballtop = document.querySelector('.lucky-ball-up');
@@ -11,7 +12,7 @@
         key: 'top',
         start: 0,
         end: 150,
-        from: 150,
+        from: 120,
         to: -200,
         format: '%spx',
         target: luckyballtop
@@ -53,7 +54,7 @@
     section.transitions([
       {
         key: 'left',
-        start: -30,
+        start: 0,
         end: 100,
         from: -1000,
         to: 40,
@@ -62,7 +63,7 @@
       }, {
         key: 'opacity',
         start: 80,
-        end: 120,
+        end: 100,
         from: 0.3,
         to: 1,
         format: '%s',
@@ -71,34 +72,16 @@
       }, {
         key: 'transform',
         start: 0,
-        end: 120,
+        end: 100,
         from: 0,
         to: 720,
         format: 'rotateY(%sdeg)',
         target: cloth,
-        prefix: true
-      }, {
-        key: '-webkit-transform',
-        start: 0,
-        end: 120,
-        from: 1,
-        to: 1.1,
-        format: 'scale(%s)',
-        target: lucky,
-        prefix: true
-      }, {
-        key: 'transform',
-        start: 0,
-        end: 120,
-        from: 1,
-        to: 1.1,
-        format: 'scale(%s)',
-        target: lucky,
         prefix: true
       }, {
         key: '-ms-transform',
         start: 0,
-        end: 120,
+        end: 100,
         from: 0,
         to: 720,
         format: 'rotateY(%sdeg)',
@@ -107,7 +90,7 @@
       }, {
         key: '-webkit-transform',
         start: 0,
-        end: 120,
+        end: 100,
         from: 0,
         to: 720,
         format: 'rotateY(%sdeg)',
@@ -115,7 +98,7 @@
         prefix: true
       }, {
         key: 'right',
-        start: -30,
+        start: 0,
         end: 100,
         from: -1000,
         to: 52,
@@ -124,7 +107,7 @@
       }, {
         key: 'opacity',
         start: 80,
-        end: 120,
+        end: 100,
         from: 0.3,
         to: 1,
         format: '%s',
@@ -133,7 +116,7 @@
       }, {
         key: '-webkit-transform',
         start: 0,
-        end: 120,
+        end: 100,
         from: 0,
         to: 720,
         format: 'rotateY(%sdeg)',
@@ -142,7 +125,7 @@
       }, {
         key: '-ms-transform',
         start: 0,
-        end: 120,
+        end: 100,
         from: 0,
         to: 720,
         format: 'rotateY(%sdeg)',
@@ -151,7 +134,7 @@
       }, {
         key: 'transform',
         start: 0,
-        end: 120,
+        end: 100,
         from: 0,
         to: 720,
         format: 'rotateY(%sdeg)',
@@ -160,7 +143,7 @@
       }, {
         key: 'opacity',
         start: 80,
-        end: 120,
+        end: 100,
         from: 0.3,
         to: 1,
         format: '%s',
@@ -186,6 +169,9 @@
     ]);
   });
   window.onload = function(){
+    var section1, section2;
+    section1 = document.querySelector('.section-1');
+    section2 = document.querySelector('.section-2');
     return page.init();
   };
 }).call(this);
