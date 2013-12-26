@@ -200,7 +200,7 @@
       var afn;
       return afn = setTimeout(function(){
         return fb.post();
-      }, 8000);
+      }, 5000);
     };
     myStopFunction = function(){
       clearTimeout(lfn);

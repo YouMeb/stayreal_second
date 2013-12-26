@@ -214,7 +214,7 @@ if content-value.value == 'content'
 		afn = setTimeout(
 			->
 				fb.post() 
-		8000
+		5000
 		)
 
 	myStopFunction = ->
