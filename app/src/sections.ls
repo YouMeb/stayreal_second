@@ -60,13 +60,14 @@ page.section 1, (section) !->
 	n-acti = document.querySelector '.n-acti'
 	n-shop = document.querySelector '.n-shop'
 	bg_2 = document.querySelector '.bg_2'
-	
+	scrolldiv = document.getElementById('scrolldiv')
+
 	section.transitions [
 		{
 			key: 'left'
 			start: 0
 			end: 100 
-			from: -1000 
+			from: -500 
 			to: 40 
 			format: '%spx' 
 			target: item
@@ -85,9 +86,9 @@ page.section 1, (section) !->
 			key: 'transform'
 			start: 0
 			end: 100 
-			from: 0
-			to: 720
-			format: 'rotateY(%sdeg)' 
+			from: -60
+			to: 0
+			format: 'rotate(%sdeg)' 
 			target: cloth
 			prefix: true
 		}
@@ -135,9 +136,9 @@ page.section 1, (section) !->
 			key: '-ms-transform'
 			start: 0
 			end: 100 
-			from: 0
-			to: 720
-			format: 'rotateY(%sdeg)' 
+			from: -60
+			to: 0
+			format: 'rotate(%sdeg)' 
 			target: cloth
 			prefix: true
 		}
@@ -145,9 +146,9 @@ page.section 1, (section) !->
 			key: '-webkit-transform'
 			start: 0
 			end: 100 
-			from: 0
-			to: 720
-			format: 'rotateY(%sdeg)' 
+			from: -60
+			to: 0
+			format: 'rotate(%sdeg)' 
 			target: cloth
 			prefix: true
 		}
@@ -155,7 +156,7 @@ page.section 1, (section) !->
 			key: 'right'
 			start: 0
 			end: 100 
-			from: -1000 
+			from: -500 
 			to: 52
 			format: '%spx' 
 			target: cloth
@@ -175,9 +176,9 @@ page.section 1, (section) !->
 			key: '-webkit-transform'
 			start: 0
 			end: 100 
-			from: 0
-			to: 720
-			format: 'rotateY(%sdeg)' 
+			from: 60
+			to: 0
+			format: 'rotate(%sdeg)' 
 			target: item
 			prefix: true
 		}
@@ -185,9 +186,9 @@ page.section 1, (section) !->
 			key: '-ms-transform'
 			start: 0
 			end: 100 
-			from: 0
-			to: 720
-			format: 'rotateY(%sdeg)' 
+			from: 60
+			to: 0
+			format: 'rotate(%sdeg)' 
 			target: item
 			prefix: true
 		}
@@ -195,9 +196,9 @@ page.section 1, (section) !->
 			key: 'transform'
 			start: 0
 			end: 100 
-			from: 0
-			to: 720
-			format: 'rotateY(%sdeg)' 
+			from: 60
+			to: 0
+			format: 'rotate(%sdeg)' 
 			target: item
 			prefix: true
 		} 
@@ -229,7 +230,15 @@ page.section 1, (section) !->
 			format: 'scale(%s)' 
 			target: bg_2
 		}
-
+		{
+			key: 'opacity'
+			start: 80
+			end: 100 
+			from: 1
+			to: 0
+			format: '%s' 
+			target: scrolldiv
+		}
 	]
 
 window.onload = -> 

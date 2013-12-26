@@ -179,15 +179,7 @@ body{
 .content2{
 	/*height:1620px;*/
 }
-.wheel-kitty{
-	width:340px;
-	height:433px;
-	position: absolute;
-	left:50%;
-	margin-left: -170px;
-	top:193px;
-	z-index: 5;
-}
+
 .lucky-result{
 	width: 556px;
 	height: 395px;

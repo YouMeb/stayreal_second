@@ -257,24 +257,24 @@
 	100% {transform:translate3d(55%, 1000px,0)}
 
 @keyframes b1 
-	0% {transform:scale(0.8)}
-	20% {transform:scale(1)}
+	0% {transform:scale(0.8) translateZ(0) }
+	20% {transform:scale(1) translateZ(0)}
 
 @keyframes b2
-	20% {transform:scale(0.8)}
-	40% {transform:scale(1)}
+	20% {transform:scale(0.8) translateZ(0)}
+	40% {transform:scale(1) translateZ(0)}
 
 @keyframes b3 
-	40% {transform:scale(0.8)}
-	60% {transform:scale(1)}
+	40% {transform:scale(0.8) translateZ(0)}
+	60% {transform:scale(1) translate3dZ(0)}
 
 @keyframes b4 
-	60% {transform:scale(0.8)}
-	80% {transform:scale(1)}
+	60% {transform:scale(0.8) translateZ(0)}
+	80% {transform:scale(1) translateZ}
 
 @keyframes b5 
-	80% {transform:scale(0.8)}
-	100% {transform:scale(1)}
+	80% {transform:scale(0.8) translateZ(0)}
+	100% {transform:scale(1) translateZ(0)}
 
 @keyframes close
 	from {
@@ -667,7 +667,7 @@ section
 .closeit 
 	display:none
 .lucky-result-div
-	transform:translateZ(0)
+	transform:translate3d(0,0,0)
 .scrolldiv
 	width:44px
 	height:60px
@@ -681,3 +681,14 @@ section
 	animation: scrolldown 1s infinite alternate
 .scrolldiv.show
 	animation: scrollshow 5s linear
+
+.wheel-kitty
+	width:340px
+	height:433px
+	position: absolute
+	left:50%
+	margin-left: -170px
+	top:193px
+	z-index: 5
+	transform: translate3d(0,0,0)
+

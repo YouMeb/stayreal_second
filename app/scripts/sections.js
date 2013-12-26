@@ -44,19 +44,20 @@
     ]);
   });
   page.section(1, function(section){
-    var item, cloth, lucky, nActi, nShop, bg_2;
+    var item, cloth, lucky, nActi, nShop, bg_2, scrolldiv;
     item = document.querySelector('.suggest-item');
     cloth = document.querySelector('.suggest-cloth');
     lucky = document.querySelector('.lucky-result-div');
     nActi = document.querySelector('.n-acti');
     nShop = document.querySelector('.n-shop');
     bg_2 = document.querySelector('.bg_2');
+    scrolldiv = document.getElementById('scrolldiv');
     section.transitions([
       {
         key: 'left',
         start: 0,
         end: 100,
-        from: -1000,
+        from: -500,
         to: 40,
         format: '%spx',
         target: item
@@ -73,34 +74,34 @@
         key: 'transform',
         start: 0,
         end: 100,
-        from: 0,
-        to: 720,
-        format: 'rotateY(%sdeg)',
+        from: -60,
+        to: 0,
+        format: 'rotate(%sdeg)',
         target: cloth,
         prefix: true
       }, {
         key: '-ms-transform',
         start: 0,
         end: 100,
-        from: 0,
-        to: 720,
-        format: 'rotateY(%sdeg)',
+        from: -60,
+        to: 0,
+        format: 'rotate(%sdeg)',
         target: cloth,
         prefix: true
       }, {
         key: '-webkit-transform',
         start: 0,
         end: 100,
-        from: 0,
-        to: 720,
-        format: 'rotateY(%sdeg)',
+        from: -60,
+        to: 0,
+        format: 'rotate(%sdeg)',
         target: cloth,
         prefix: true
       }, {
         key: 'right',
         start: 0,
         end: 100,
-        from: -1000,
+        from: -500,
         to: 52,
         format: '%spx',
         target: cloth
@@ -117,27 +118,27 @@
         key: '-webkit-transform',
         start: 0,
         end: 100,
-        from: 0,
-        to: 720,
-        format: 'rotateY(%sdeg)',
+        from: 60,
+        to: 0,
+        format: 'rotate(%sdeg)',
         target: item,
         prefix: true
       }, {
         key: '-ms-transform',
         start: 0,
         end: 100,
-        from: 0,
-        to: 720,
-        format: 'rotateY(%sdeg)',
+        from: 60,
+        to: 0,
+        format: 'rotate(%sdeg)',
         target: item,
         prefix: true
       }, {
         key: 'transform',
         start: 0,
         end: 100,
-        from: 0,
-        to: 720,
-        format: 'rotateY(%sdeg)',
+        from: 60,
+        to: 0,
+        format: 'rotate(%sdeg)',
         target: item,
         prefix: true
       }, {
@@ -165,6 +166,14 @@
         to: 1.1,
         format: 'scale(%s)',
         target: bg_2
+      }, {
+        key: 'opacity',
+        start: 80,
+        end: 100,
+        from: 1,
+        to: 0,
+        format: '%s',
+        target: scrolldiv
       }
     ]);
   });
