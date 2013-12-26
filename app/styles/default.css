@@ -269,15 +269,17 @@ body{
 	background: url('../img/ball-soso.png') no-repeat;
 }
 .suggest-item-img-1 {
-	width: 286px;
+	width: 356px;
 	height: 408px;
 	background: url('../img/sug-item1.png') no-repeat;
+	background-size:100%;
 
 }
 .suggest-item-img-2 {
-	width: 286px;
+	width: 356px;
 	height: 408px;
 	background: url('../img/sug-item2.png') no-repeat;
+	background-size:100%;
 }
 .suggest-item-img-3 {
 	width: 356px;
@@ -286,29 +288,34 @@ body{
 	background-size:100%;
 }
 .suggest-item-img-4 {
-	width: 286px;
+	width: 356px;
 	height: 408px;
 	background: url('../img/sug-item4.png') no-repeat;
+	background-size:100%;
 }
 .suggest-item-img-5 {
-	width: 286px;
+	width: 356px;
 	height: 408px;
 	background: url('../img/sug-item5.png') no-repeat;
+	background-size:100%;
 }
 .suggest-item-img-6 {
-	width: 286px;
+	width: 356px;
 	height: 408px;
 	background: url('../img/sug-item6.png') no-repeat;
+	background-size:100%;
 }
 .suggest-item-img-7 {
-	width: 286px;
+	width: 356px;
 	height: 408px;
 	background: url('../img/sug-item7.png') no-repeat;
+	background-size:100%;
 }
 .suggest-item-img-8 {
-	width: 286px;
+	width: 356px;
 	height: 408px;
 	background: url('../img/sug-item8.png') no-repeat;
+	background-size:100%;
 }
 .suggest-cloth .suggest-cloth-img-1{
 	width: 358px;
@@ -317,39 +324,46 @@ body{
 	background-size: 100%;
 }
 .suggest-cloth  .suggest-cloth-img-2{
-	width: 408px;
-	height: 537px;
+	width: 358px;
+	/*height: 537px;*/
 	background: url('../img/sugguest-item-2.png') no-repeat;	
+	background-size: 100%;
 }
 .suggest-cloth  .suggest-cloth-img-3{
-	width: 408px;
-	height: 537px;
+	width: 358px;
+	/*height: 537px;*/
 	background: url('../img/sugguest-item-3.png') no-repeat;	
+	background-size: 100%;
 }
 .suggest-cloth  .suggest-cloth-img-4{
-	width: 408px;
-	height: 537px;
+	width: 358px;
+	/*height: 537px;*/
 	background: url('../img/sugguest-item-4.png') no-repeat;	
+	background-size: 100%;
 }
 .suggest-cloth  .suggest-cloth-img-5{
-	width: 408px;
-	height: 537px;
+	width: 358px;
+	/*height: 537px;*/
 	background: url('../img/sugguest-item-5.png') no-repeat;	
+	background-size: 100%;
 }
 .suggest-cloth  .suggest-cloth-img-6{
-	width: 408px;
-	height: 537px;
+	width: 358px;
+	/*height: 537px;*/
 	background: url('../img/sugguest-item-6.png') no-repeat;	
+	background-size: 100%;
 }
 .suggest-cloth  .suggest-cloth-img-7{
-	width: 408px;
-	height: 537px;
+	width: 358px;
+	/*height: 537px;*/
 	background: url('../img/sugguest-item-7.png') no-repeat;	
+	background-size: 100%;
 }
 .suggest-cloth  .suggest-cloth-img-8{
-	width: 408px;
-	height: 537px;
+	width: 358px;
+	/*height: 537px;*/
 	background: url('../img/sugguest-item-8.png') no-repeat;	
+	background-size: 100%;
 }
 .wheel-bk{
 	width: 340px;
