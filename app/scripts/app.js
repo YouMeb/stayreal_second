@@ -99,7 +99,7 @@
     }
     return FB.ui({
       method: 'feed',
-      name: '新春開運上上籤  2014運勢結果-' + mtitle,
+      name: mtitle,
       link: murl,
       caption: '',
       picture: mimage,
