@@ -317,6 +317,23 @@
 	100%{
 		transform:scale(1)
 	}
+
+@keyframes hoveritem
+	from{
+		background-position:0% 0%
+	}
+	to{
+		background-position:100% 0%
+	}
+
+@keyframes hovercloth
+	from{
+		background-position:0% 0%
+	}
+	to{
+		background-position:100% 0%
+	}
+
 .lucky-ball-up	
 	animation:ballup ease 5s
 	top:0
@@ -667,8 +684,10 @@ section
 	animation: bclose 2s ease-in
 .closeit 
 	display:none
+
 .lucky-result-div
 	transform:translate3d(0,0,0)
+
 .scrolldiv
 	width:43px
 	height:223px
@@ -678,8 +697,10 @@ section
 	// position:absolute
 	transform:translateZ(0)
 	background:url('../img/remind2.png') 
+
 .scrolldiv.show.down
 	animation: scrolldown 1s infinite alternate
+
 .scrolldiv.show
 	animation: scrollshow 5s linear
 
@@ -693,3 +714,24 @@ section
 	z-index: 5
 	transform: translate3d(0,0,0)
 
+.suggest-cloth-mask
+	width:378px
+	height:537px
+	position:absolute
+	z-index:10
+.suggest-cloth-mask:hover
+	background-image: url('../img/star-cloth.gif')
+	// background-size:100%
+	// animation: hovercloth .3s steps(3) infinite alternate
+	// transition: background-image 0.3s
+
+.suggest-item-mask
+	width:266px
+	height:408px
+	position:absolute
+	z-index:10
+.suggest-item-mask:hover
+	background-image: url('../img/star-item.gif')
+	// background-size:100%
+	// animation: hoveritem .3s steps(2) infinite alternate
+	// transition: background-image 0.3s

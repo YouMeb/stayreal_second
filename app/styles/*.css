@@ -53,6 +53,10 @@ section{-webkit-animation:sc ease 2s;-moz-animation:sc ease 2s;-o-animation:sc e
 .scrolldiv.show.down{-webkit-animation:scrolldown 1s infinite alternate;-moz-animation:scrolldown 1s infinite alternate;-o-animation:scrolldown 1s infinite alternate;-ms-animation:scrolldown 1s infinite alternate;animation:scrolldown 1s infinite alternate}
 .scrolldiv.show{-webkit-animation:scrollshow 5s linear;-moz-animation:scrollshow 5s linear;-o-animation:scrollshow 5s linear;-ms-animation:scrollshow 5s linear;animation:scrollshow 5s linear}
 .wheel-kitty{width:340px;height:433px;position:absolute;left:50%;margin-left:-170px;top:193px;z-index:5;-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
+.suggest-cloth-mask{width:378px;height:537px;position:absolute;z-index:10}
+.suggest-cloth-mask:hover{background-image:url("../img/star-cloth.gif")}
+.suggest-item-mask{width:266px;height:408px;position:absolute;z-index:10}
+.suggest-item-mask:hover{background-image:url("../img/star-item.gif")}
 @-moz-keyframes ballup{60%{top:-703px}
 75%{top:0}
 80%{top:0}
@@ -593,4 +597,24 @@ section{-webkit-animation:sc ease 2s;-moz-animation:sc ease 2s;-o-animation:sc e
 70%{opacity:0;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";filter:alpha(opacity=0);-webkit-transform:scale(1.5);-moz-transform:scale(1.5);-o-transform:scale(1.5);-ms-transform:scale(1.5);transform:scale(1.5)}
 80%{opacity:1;-ms-filter:none;filter:none;-webkit-transform:scale(1.5);-moz-transform:scale(1.5);-o-transform:scale(1.5);-ms-transform:scale(1.5);transform:scale(1.5)}
 100%{-webkit-transform:scale(1);-moz-transform:scale(1);-o-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}
+}@-moz-keyframes hoveritem{0%{background-position:0% 0%}
+100%{background-position:100% 0%}
+}@-webkit-keyframes hoveritem{0%{background-position:0% 0%}
+100%{background-position:100% 0%}
+}@-o-keyframes hoveritem{0%{background-position:0% 0%}
+100%{background-position:100% 0%}
+}@-ms-keyframes hoveritem{0%{background-position:0% 0%}
+100%{background-position:100% 0%}
+}@keyframes hoveritem{0%{background-position:0% 0%}
+100%{background-position:100% 0%}
+}@-moz-keyframes hovercloth{0%{background-position:0% 0%}
+100%{background-position:100% 0%}
+}@-webkit-keyframes hovercloth{0%{background-position:0% 0%}
+100%{background-position:100% 0%}
+}@-o-keyframes hovercloth{0%{background-position:0% 0%}
+100%{background-position:100% 0%}
+}@-ms-keyframes hovercloth{0%{background-position:0% 0%}
+100%{background-position:100% 0%}
+}@keyframes hovercloth{0%{background-position:0% 0%}
+100%{background-position:100% 0%}
 }

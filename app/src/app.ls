@@ -81,8 +81,6 @@ const postfb = ->
 		if (metas[i].getAttribute("property") == "og:image") 
 			mimage = metas[i].getAttribute("content")
 
-
-	
 	FB.ui(
 		method:'feed'
 		name: mtitle
@@ -90,7 +88,6 @@ const postfb = ->
 		caption: ''
 		picture: mimage
 		description: mdesp
-		massage: 'yoyoyoyoyo'
 	)
 	# console.log(fb.at)
 	# xhr = new XMLHttpRequest()
@@ -213,7 +210,7 @@ if content-value.value == 'content'
 	autosharefn = ->
 		afn = setTimeout(
 			->
-				fb.post() 
+				# fb.post() 
 		5000
 		)
 
