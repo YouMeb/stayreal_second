@@ -7,18 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>新春開運上上籤  2014運勢結果-逢凶化吉</title>
-    <!-- 
-    <meta name="robots" content="noindex">
-    <meta name="googlebot" content="noindex">
-    <meta name="robots" content="nofollow">
-    <meta name="robots" content="noarchive">
-    <meta name="googlebot" content="nosnippet">
-    <meta name="robots" content="noodp">
-    <meta name="slurp" content="noydir">
-    <meta name="robots" content="noimageindex,nomediaindex">
-    -->
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
     <meta property="og:title" content="逢兇化吉">
     <meta property="og:type" content="website">
     <meta property="og:image" content="http://event.istayreal.com/2014kitty/img/oops.jpg">
@@ -97,13 +86,13 @@
             <!--運勢-->
             <div class="lucky-result-oops lucky-result-div"></div>
             <!-- 運勢換圖 -->
-            <a class="play-again" href="/2014kitty" onfocus="if(this.blur)this.blur()"></a>
+            <a class="play-again" href="/2014kitty" onfocus="if(this.blur)this.blur()" id="play-again"></a>
             <div class="share-btn">
                <a id="fb" class="addthis_button_facebook" />
                 <img src="img/fb.png"
                width="62" height="22" border="0" alt="Share" />
               </a>
-              <a id="weibo" class="addthis_button_sinaweibo"/>
+              <a id="weibo" class="addthis_button_sinaweibo" />
                 <img src="img/weibo.png"
                width="62" height="22" border="0" alt="Share" />
               </a>
@@ -112,7 +101,7 @@
         </section>
         <section class="section">
             <div class="suggest-item" >
-              <a href="http://tw.istayreal.com/product/BI13002">
+              <a href="http://tw.istayreal.com/product/BI13002" target="_new" id="sgitem">
                <!--小物-->
                <div class="suggest-item-mask"></div>
                <div class="suggest-item-img suggest-item-img-8"></div>
@@ -120,7 +109,7 @@
               </a>
             </div>
             <div class="suggest-cloth">
-              <a href="http://tw.istayreal.com/product/TC13026">
+              <a href="http://tw.istayreal.com/product/TC13026" target="_new" id="sgdress">
                 <!--穿搭-->
                 <div class="suggest-cloth-mask"></div>
                 <div class="suggest-cloth-img suggest-cloth-img-1">
@@ -133,10 +122,10 @@
           <div class="nav">
             <ul>
               <li>
-                <a class="n-acti" href="#"></a>
+                <a class="n-acti" href="#" id="gna"></a>
               </li>
               <li>
-                <a class="n-shop" href="http://tw.istayreal.com/product/topic/3"></a>
+                <a class="n-shop" href="http://tw.istayreal.com/product/topic/3" target="_new" id="gns"></a>
               </li>
             </ul>
           </div>
@@ -154,8 +143,11 @@
        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
+      ga('create', 'UA-20067316-7', 'auto');
+      ga('create', 'UA-20067316-1', 'auto', {'name': 'SRanalytics'});
+      ga('require', 'linkid', 'linkid.js');
+      ga('send', 'pageview');
+      ga('SRanalytics.send', 'pageview');
     </script>  
     <script type="text/javascript" src="http://connect.facebook.net/zh_TW/all.js"></script>
     <script src="bower_components/sections.js/dist/sectionsjs.js"></script>

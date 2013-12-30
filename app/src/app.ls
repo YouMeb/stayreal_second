@@ -154,6 +154,38 @@ b3 = document.querySelector('.b3')
 b4 = document.querySelector('.b4')
 b5 = document.querySelector('.b5')
 
+
+#ga
+gfb = document.getElementById('fb')
+gweibo = document.getElementById('weibo')
+gsgitem = document.getElementById('sgitem')
+gsgdress = document.getElementById('sgdress')
+gna = document.getElementById('gna')
+gns = document.getElementById('gns')
+play-again = document.getElementById('play-again')
+
+if(gfb)
+	gfb.onclick = ->
+		ga(['_trackEvent' '活動首頁' 'FB button' 'Facebook分享'])
+if(gweibo)
+	gweibo.onclick = ->
+		ga(['_trackEvent' '活動首頁' 'Weibo button' '微博分享'])
+if(gsgitem)
+	gsgitem.onclick = ->
+		ga(['_trackEvent', '活動內頁', 'productlink', '建議小物'])
+if(gsgdress)
+	gsgdress.onclick = ->
+		ga(['_trackEvent', '活動內頁', 'productlink', '建議穿搭'])
+if(gna)
+	gna.onclick = -> 
+		ga(['_trackEvent', '活動內頁', 'eventlink', '一元復始開運金活動'])
+if(gns)
+	gns.onclick = ->
+		ga(['_trackEvent', '活動內頁', 'productlink', '開運商品馬上購買'])
+if(play-again)
+	play-again.onclick= ->
+		ga(['_trackEvent', '活動內頁', 'Play', '再玩一次'])
+
 # year = $year.options[$year.selectedIndex].value
 # month = $month.options[$month.selectedIndex].value
 # day = $day.options[$day.selectedIndex].value
@@ -166,7 +198,9 @@ fb.init()
 
 if($login)
 	$login.onclick = ->
+		ga([\_trackEvent \活動首頁 \Play \測2014運勢])
 		fb.login()			
+
 if($post)
 	$post.onclick = ->
 		fb.post()
