@@ -1,6 +1,6 @@
 (function(){
-  var fbAppId, init, game, fb, initfb, loginfb, postfb, postpicfb, drawfb, resp, $post, $login, $draw, $postpic, $year, $month, $day, contentValue, loading, scrolldiv, b1, b2, b3, b4, b5, gfb, gweibo, gsgitem, gsgdress, gna, gns, playAgain, loadingfn, closeloading, autosharefn, myStopFunction;
-  fbAppId = '219756031530311';
+  
+  var init, game, $post, $login, $draw, $postpic, $year, $month, $day, contentValue, loading, scrolldiv, b1, b2, b3, b4, b5, gfb, gweibo, gsgitem, gsgdress, gna, gns, playAgain, played, loadingfn, closeloading, myStopFunction;
   init = {
     login: 0,
     voted: 0
@@ -8,7 +8,7 @@
   game = {
     array: ['best', 'better', 'bravo', 'good', 'ok1', 'ok2', 'oops', 'soso'],
     go: function(r){
-      return window.location.href = 'content-' + this.array[r] + '.html';
+      return window.location.href = 'content-cn-' + this.array[r] + '.html';
     },
     init: function(){
       return new Date().getTime();
@@ -20,115 +20,6 @@
       n = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
       return this.go(n);
     }
-  };
-  fb = {
-    at: '',
-    user_id: '',
-    init: function(){
-      return initfb();
-    },
-    login: function(){
-      return loginfb();
-    },
-    post: function(){
-      return postfb();
-    },
-    draw: function(){
-      return drawfb();
-    },
-    postpic: function(){
-      return postpicfb();
-    }
-  };
-  initfb = function(){
-    return FB.init({
-      appId: fbAppId,
-      status: true,
-      cookie: true,
-      xfbml: true
-    });
-  };
-  loginfb = function(){
-    if (FB) {
-      FB.login(function(res){
-        if (res.authResponse) {
-          return FB.api('/me', function(response){
-            init.login = 1;
-            if (!response.verified) {
-              alert('很抱歉你的帳號未通過驗證！再試一次');
-            }
-            FB.getLoginStatus(function(_resp){
-              var uid, accessToken;
-              if (_resp.status === 'connected') {
-                uid = _resp.authResponse.userID;
-                accessToken = _resp.authResponse.accessToken;
-                fb.user_id = _resp.authResponse.userID;
-                fb.at = accessToken;
-                return game.play();
-              } else {
-                return false;
-              }
-            });
-          });
-        }
-      }, {
-        scope: 'email,photo_upload,publish_actions'
-      });
-      return false;
-    } else {
-      return game.play();
-    }
-  };
-  postfb = function(){
-    var metas, i$, to$, i, mdesp, mtitle, murl, mimage;
-    metas = document.getElementsByTagName('meta');
-    for (i$ = 0, to$ = metas.length - 1; i$ <= to$; ++i$) {
-      i = i$;
-      if (metas[i].getAttribute("property") === "og:description") {
-        mdesp = metas[i].getAttribute("content");
-      }
-      if (metas[i].getAttribute("property") === "og:title") {
-        mtitle = metas[i].getAttribute("content");
-      }
-      if (metas[i].getAttribute("property") === "og:url") {
-        murl = metas[i].getAttribute("content");
-      }
-      if (metas[i].getAttribute("property") === "og:image") {
-        mimage = metas[i].getAttribute("content");
-      }
-    }
-    return FB.ui({
-      method: 'feed',
-      name: mtitle,
-      link: murl,
-      caption: '',
-      picture: mimage,
-      description: mdesp
-    });
-  };
-  postpicfb = function(){
-    return FB.api(fb.user_id + '/photos', 'post', {
-      from: from,
-      url: url_to_foto,
-      message: mess,
-      access_token: fb.at
-    }, function(response){
-      if (response && !response.error) {
-        return control.content.PageName.update_post("success", response.post_id);
-      } else {
-        return control.content.PageName.update_post("error", "");
-      }
-    });
-  };
-  drawfb = function(){
-    var xhr;
-    xhr = new XMLHttpRequest();
-    xhr.onload = resp;
-    xhr.open('POST', 'https://graph.facebook.com/me/stayrealxkitty:draw?access_token=' + fb.at + '&method=POST&lucky_stick=http%3A%2F%2Fsamples.ogp.me%2F220274168145164', true);
-    return xhr.send();
-  };
-  resp = function(){
-    return console.log(this.responseText);
   };
   $post = document.getElementById('post');
   $login = document.getElementById('login');
@@ -187,11 +78,11 @@
       return ga(['_trackEvent', '活動內頁', 'Play', '再玩一次']);
     };
   }
-  fb.init();
   if ($login) {
     $login.onclick = function(){
       ga(['_trackEvent', '活動首頁', 'Play', '測2014運勢']);
-      return fb.login();
+      localStorage['played'] = true;
+      return game.play();
     };
   }
   if ($post) {
@@ -210,16 +101,10 @@
     };
   }
   if (contentValue.value === 'content') {
-    FB.getLoginStatus(function(_resp){
-      var uid, accessToken;
-      if (_resp.status === 'connected') {
-        uid = _resp.authResponse.userID;
-        accessToken = _resp.authResponse.accessToken;
-        return fb.at = accessToken;
-      } else {
-        return window.location.href = "/2014kitty";
-      }
-    });
+    played = localStorage['played'] || false;
+    if (!played) {
+      window.location.href = "/2014kitty";
+    }
     loadingfn = function(){
       var lfn;
       return lfn = setTimeout(function(){
@@ -238,18 +123,11 @@
         scrolldiv.className = scrolldiv.className + ' down';
       }, 5000);
     };
-    autosharefn = function(){
-      var afn;
-      return afn = setTimeout(function(){
-        return fb.post();
-      }, 5000);
-    };
     myStopFunction = function(){
       clearTimeout(lfn);
       return clearTimeout(afn);
     };
     loadingfn();
-    autosharefn();
     closeloading();
   }
 }).call(this);

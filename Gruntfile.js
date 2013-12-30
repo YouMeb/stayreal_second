@@ -15,11 +15,12 @@ module.exports = function (grunt) {
     yeoman: {
       // configurable paths
       app: require('./bower.json').appPath || 'app',
+      mobileapp: require('./bower.json').mobileappPath || 'mobileapp',
       dist: 'dist'
     },
     watch: {
       livescript: {
-        files: ['<%= yeoman.app %>/src/{,*/}*.ls'],
+        files: ['<%= yeoman.app %>/src/{,*/}*.ls','<%= yeoman.mobileapp %>/src/{,*/}*.ls'],
         tasks: ['livescript:dist']
       },
       livescriptTest: {
@@ -28,12 +29,13 @@ module.exports = function (grunt) {
       },
       stylus: {
         files: [
-          '<%= yeoman.app %>/stylus/{,*/}*.styl'
+          '<%= yeoman.app %>/stylus/{,*/}*.styl',
+          '<%= yeoman.mobileapp %>/stylus/{,*/}*.styl'
         ],
         tasks: ['stylus']
       },
       styles: {
-        files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
+        files: ['<%= yeoman.app %>/styles/{,*/}*.css','<%= yeoman.mobileapp %>/styles/{,*/}*.css'],
         tasks: ['copy:styles', 'autoprefixer']
       },
       livereload: {
