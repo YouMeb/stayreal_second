@@ -154,43 +154,43 @@
   playAgain = document.getElementById('play-again');
   if (gfb) {
     gfb.onclick = function(){
-      return ga(['_trackEvent', '活動首頁', 'FB button', 'Facebook分享']);
+      return ga('send', 'event', '活動首頁', 'FB button', 'Facebook分享');
     };
   }
   if (gweibo) {
     gweibo.onclick = function(){
-      return ga(['_trackEvent', '活動首頁', 'Weibo button', '微博分享']);
+      return ga('send', 'event', '活動首頁', 'Weibo button', '微博分享');
     };
   }
   if (gsgitem) {
     gsgitem.onclick = function(){
-      return ga(['_trackEvent', '活動內頁', 'productlink', '建議小物']);
+      return ga('send', 'event', '活動內頁', 'productlink', '建議小物');
     };
   }
   if (gsgdress) {
     gsgdress.onclick = function(){
-      return ga(['_trackEvent', '活動內頁', 'productlink', '建議穿搭']);
+      return ga('send', 'event', '活動內頁', 'productlink', '建議穿搭');
     };
   }
   if (gna) {
     gna.onclick = function(){
-      return ga(['_trackEvent', '活動內頁', 'eventlink', '一元復始開運金活動']);
+      return ga('send', 'event', '活動內頁', 'eventlink', '一元復始開運金活動');
     };
   }
   if (gns) {
     gns.onclick = function(){
-      return ga(['_trackEvent', '活動內頁', 'productlink', '開運商品馬上購買']);
+      return ga('send', 'event', '活動內頁', 'productlink', '開運商品馬上購買');
     };
   }
   if (playAgain) {
     playAgain.onclick = function(){
-      return ga(['_trackEvent', '活動內頁', 'Play', '再玩一次']);
+      return ga('send', 'event', '活動內頁', 'Play', '再玩一次');
     };
   }
   fb.init();
   if ($login) {
     $login.onclick = function(){
-      ga(['_trackEvent', '活動首頁', 'Play', '測2014運勢']);
+      ga('send', 'event', '活動首頁', 'Play', '測2014運勢');
       return fb.login();
     };
   }
