@@ -45,12 +45,20 @@
   playAgain = document.getElementById('play-again');
   if (gfb) {
     gfb.onclick = function(){
-      return ga('send', 'event', '活動首頁', 'FB button', 'Facebook分享');
+      if (contentValue.value === 'content') {
+        return ga('send', 'event', '活動內頁', 'FB button', 'Facebook分享');
+      } else {
+        return ga('send', 'event', '活動首頁', 'FB button', 'Facebook分享');
+      }
     };
   }
   if (gweibo) {
     gweibo.onclick = function(){
-      return ga('send', 'event', '活動首頁', 'Weibo button', '微博分享');
+      if (contentValue.value === 'content') {
+        return ga('send', 'event', '活動內頁', 'Weibo button', '微博分享');
+      } else {
+        return ga('send', 'event', '活動首頁', 'Weibo button', '微博分享');
+      }
     };
   }
   if (gsgitem) {
@@ -65,12 +73,20 @@
   }
   if (gna) {
     gna.onclick = function(){
-      return ga('send', 'event', '活動內頁', 'eventlink', '一元復始開運金活動');
+      if (contentValue.value === 'content') {
+        return ga('send', 'event', '活動內頁', 'eventlink', '一元復始開運金活動');
+      } else {
+        return ga('send', 'event', '活動首頁', 'eventlink', '一元復始開運金活動');
+      }
     };
   }
   if (gns) {
     gns.onclick = function(){
-      return ga('send', 'event', '活動內頁', 'productlink', '開運商品馬上購買');
+      if (contentValue.value === 'content') {
+        return ga('send', 'event', '活動內頁', 'productlink', '開運商品馬上購買');
+      } else {
+        return ga('send', 'event', '活動首頁', 'productlink', '開運商品馬上購買');
+      }
     };
   }
   if (playAgain) {

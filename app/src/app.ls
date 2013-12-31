@@ -166,10 +166,17 @@ play-again = document.getElementById('play-again')
 
 if(gfb)
 	gfb.onclick = ->
-		ga('send', 'event', '活動首頁', 'FB button', 'Facebook分享')
+		if content-value.value == 'content'
+			ga('send', 'event', '活動內頁', 'FB button', 'Facebook分享')
+		else
+			ga('send', 'event', '活動首頁', 'FB button', 'Facebook分享')
+
 if(gweibo)
 	gweibo.onclick = ->
-		ga('send', 'event', '活動首頁', 'Weibo button', '微博分享')
+		if content-value.value == 'content'
+			ga('send', 'event', '活動內頁', 'Weibo button', '微博分享')
+		else 
+			ga('send', 'event', '活動首頁', 'Weibo button', '微博分享')
 if(gsgitem)
 	gsgitem.onclick = ->
 		ga('send', 'event', '活動內頁', 'productlink', '建議小物')
@@ -178,10 +185,16 @@ if(gsgdress)
 		ga('send', 'event', '活動內頁', 'productlink', '建議穿搭')
 if(gna)
 	gna.onclick = -> 
-		ga('send', 'event', '活動內頁', 'eventlink', '一元復始開運金活動')
+		if content-value.value == 'content'
+			ga('send', 'event', '活動內頁', 'eventlink', '一元復始開運金活動')
+		else
+			ga('send', 'event', '活動首頁', 'eventlink', '一元復始開運金活動')
 if(gns)
 	gns.onclick = ->
-		ga('send', 'event', '活動內頁', 'productlink', '開運商品馬上購買')
+		if content-value.value == 'content'
+			ga('send', 'event', '活動內頁', 'productlink', '開運商品馬上購買')
+		else
+			ga('send', 'event', '活動首頁', 'productlink', '開運商品馬上購買')
 if(play-again)
 	play-again.onclick= ->
 		ga('send', 'event', '活動內頁', 'Play', '再玩一次')
