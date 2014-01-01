@@ -156,8 +156,8 @@ b5 = document.querySelector('.b5')
 
 
 #ga
-gfb = document.getElementById('fb')
-gweibo = document.getElementById('weibo')
+gfb = document.querySelector('.fb')
+gweibo = document.querySelector('.weibo')
 gsgitem = document.getElementById('sgitem')
 gsgdress = document.getElementById('sgdress')
 gna = document.getElementById('gna')
@@ -167,8 +167,10 @@ play-again = document.getElementById('play-again')
 if(gfb)
 	gfb.onclick = ->
 		if content-value.value == 'content'
+
 			ga('send', 'event', '活動內頁', 'FB button', 'Facebook分享')
 		else
+			console.log(123112313)
 			ga('send', 'event', '活動首頁', 'FB button', 'Facebook分享')
 
 if(gweibo)
