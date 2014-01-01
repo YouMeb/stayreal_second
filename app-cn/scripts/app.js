@@ -36,8 +36,8 @@
   b3 = document.querySelector('.b3');
   b4 = document.querySelector('.b4');
   b5 = document.querySelector('.b5');
-  gfb = document.querySelector('.fb');
-  gweibo = document.querySelector('.weibo');
+  gfb = document.querySelector('.fbaaa');
+  gweibo = document.querySelector('.weiboaaa');
   gsgitem = document.getElementById('sgitem');
   gsgdress = document.getElementById('sgdress');
   gna = document.getElementById('gna');

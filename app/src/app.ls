@@ -156,8 +156,8 @@ b5 = document.querySelector('.b5')
 
 
 #ga
-gfb = document.querySelector('.fb')
-gweibo = document.querySelector('.weibo')
+gfb = document.querySelector('.fbaaa')
+gweibo = document.querySelector('.weiboaaa')
 gsgitem = document.getElementById('sgitem')
 gsgdress = document.getElementById('sgdress')
 gna = document.getElementById('gna')
