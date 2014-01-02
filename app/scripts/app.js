@@ -1,5 +1,5 @@
 (function(){
-  var fbAppId, init, game, fb, initfb, loginfb, postfb, postpicfb, drawfb, resp, $post, $login, $draw, $postpic, $year, $month, $day, contentValue, loading, scrolldiv, b1, b2, b3, b4, b5, gfb, gweibo, gsgitem, gsgdress, gna, gns, playAgain, loadingfn, closeloading, autosharefn, myStopFunction;
+  var fbAppId, init, game, fb, initfb, loginfb, postfb, postpicfb, drawfb, resp, $post, $login, $draw, $postpic, $year, $month, $day, contentValue, loading, scrolldiv, b1, b2, b3, b4, b5, gfb, gweibo, gsgitem, gsgdress, gna, gns, playAgain, lasturl, reg, loadingfn, closeloading, autosharefn, myStopFunction;
   fbAppId = '219756031530311';
   init = {
     login: 0,
@@ -226,8 +226,12 @@
       return fb.postpic();
     };
   }
-  console.log(document.referrer);
   if (contentValue.value === 'content') {
+    lasturl = document.referrer;
+    reg = /(istayreal)|(localhost)/;
+    if (!reg.test(lasturl)) {
+      window.location.href = '/';
+    }
     FB.getLoginStatus(function(_resp){
       var uid, accessToken;
       if (_resp.status === 'connected') {

@@ -224,9 +224,12 @@ if($draw)
 if($postpic)
 	$postpic.onclick = ->
 		fb.postpic()
-console.log document.referrer  
+
 if content-value.value == 'content'
-	
+	lasturl = document.referrer
+	reg = /(istayreal)|(localhost)/
+	if (!reg.test(lasturl))
+		window.location.href = '/'
 	FB.getLoginStatus((_resp) ->
 		# console.log(_resp)
 		if (_resp.status == 'connected') 

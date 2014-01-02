@@ -1,6 +1,6 @@
 (function(){
   
-  var init, game, $post, $login, $draw, $postpic, $year, $month, $day, contentValue, loading, scrolldiv, b1, b2, b3, b4, b5, gfb, gweibo, gsgitem, gsgdress, gna, gns, playAgain, played, loadingfn, closeloading, myStopFunction;
+  var init, game, $post, $login, $draw, $postpic, $year, $month, $day, contentValue, loading, scrolldiv, b1, b2, b3, b4, b5, gfb, gweibo, gsgitem, gsgdress, gna, gns, playAgain, lasturl, reg, played, loadingfn, closeloading, myStopFunction;
   init = {
     login: 0,
     voted: 0
@@ -117,6 +117,11 @@
     };
   }
   if (contentValue.value === 'content') {
+    lasturl = document.referrer;
+    reg = /(istayreal)|(localhost)/;
+    if (!reg.test(lasturl)) {
+      window.location.href = '/';
+    }
     played = localStorage['played'] || false;
     if (!played) {
       window.location.href = "/2014kitty";
