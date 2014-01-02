@@ -6,7 +6,7 @@
     voted: 0
   };
   game = {
-    array: ['best', 'better', 'bravo', 'good', 'ok1', 'ok2', 'oops', 'soso'],
+    array: ['best', 'better', 'bravo', 'bravo', 'bravo', 'good', 'ok1', 'ok2', 'oops', 'soso'],
     go: function(r){
       return window.location.href = 'content-cn-' + this.array[r] + '.html';
     },
@@ -15,7 +15,7 @@
     },
     play: function(){
       var maxNum, minNum, n;
-      maxNum = 7;
+      maxNum = 9;
       minNum = 0;
       n = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
       return this.go(n);

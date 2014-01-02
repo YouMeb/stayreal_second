@@ -6,7 +6,7 @@
     voted: 0
   };
   game = {
-    array: ['best', 'better', 'bravo', 'good', 'ok1', 'ok2', 'oops', 'soso'],
+    array: ['best', 'better', 'bravo', 'bravo', 'bravo', 'good', 'ok1', 'ok2', 'oops', 'soso'],
     go: function(r){
       return window.location.href = 'content-' + this.array[r] + '.html';
     },
@@ -15,7 +15,7 @@
     },
     play: function(){
       var maxNum, minNum, n;
-      maxNum = 7;
+      maxNum = 9;
       minNum = 0;
       n = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
       return this.go(n);
@@ -145,8 +145,8 @@
   b3 = document.querySelector('.b3');
   b4 = document.querySelector('.b4');
   b5 = document.querySelector('.b5');
-  gfb = document.querySelector('.fb');
-  gweibo = document.querySelector('.weibo');
+  gfb = document.querySelector('.fbaaa');
+  gweibo = document.querySelector('.weiboaaa');
   gsgitem = document.getElementById('sgitem');
   gsgdress = document.getElementById('sgdress');
   gna = document.getElementById('gna');
@@ -226,6 +226,7 @@
       return fb.postpic();
     };
   }
+  console.log(document.referrer);
   if (contentValue.value === 'content') {
     FB.getLoginStatus(function(_resp){
       var uid, accessToken;

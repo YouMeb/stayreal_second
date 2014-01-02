@@ -7,13 +7,13 @@ init =
 	voted: 0
 
 game = 
-	array:['best' 'better' 'bravo' 'good' 'ok1' 'ok2' 'oops' 'soso']
+	array:['best' 'better' 'bravo' 'bravo' 'bravo' 'good' 'ok1' 'ok2' 'oops' 'soso']
 	go: (r)->
 		window.location.href = 'content-'+@array[r]+'.html'
 	init: ->
 		new Date().getTime()
 	play: ->
-		maxNum = 7  
+		maxNum = 9  
 		minNum = 0
 		n = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum
 		@go(n)
@@ -224,8 +224,9 @@ if($draw)
 if($postpic)
 	$postpic.onclick = ->
 		fb.postpic()
-
+console.log document.referrer  
 if content-value.value == 'content'
+	
 	FB.getLoginStatus((_resp) ->
 		# console.log(_resp)
 		if (_resp.status == 'connected') 
