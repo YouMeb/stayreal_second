@@ -157,7 +157,6 @@
       if (contentValue.value === 'content') {
         return ga('send', 'event', '活動內頁', 'FB button', 'Facebook分享');
       } else {
-        console.log(123112313);
         return ga('send', 'event', '活動首頁', 'FB button', 'Facebook分享');
       }
     };
@@ -229,9 +228,6 @@
   if (contentValue.value === 'content') {
     lasturl = document.referrer;
     reg = /(istayreal)|(localhost)/;
-    if (!reg.test(lasturl)) {
-      window.location.href = '/';
-    }
     FB.getLoginStatus(function(_resp){
       var uid, accessToken;
       if (_resp.status === 'connected') {

@@ -167,10 +167,8 @@ play-again = document.getElementById('play-again')
 if(gfb)
 	gfb.onclick = ->
 		if content-value.value == 'content'
-
 			ga('send', 'event', '活動內頁', 'FB button', 'Facebook分享')
 		else
-			console.log(123112313)
 			ga('send', 'event', '活動首頁', 'FB button', 'Facebook分享')
 
 if(gweibo)
@@ -228,8 +226,8 @@ if($postpic)
 if content-value.value == 'content'
 	lasturl = document.referrer
 	reg = /(istayreal)|(localhost)/
-	if (!reg.test(lasturl))
-		window.location.href = '/'
+	# if (!reg.test(lasturl))
+	# 	window.location.href = '/'
 	FB.getLoginStatus((_resp) ->
 		# console.log(_resp)
 		if (_resp.status == 'connected') 

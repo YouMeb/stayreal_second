@@ -333,49 +333,30 @@
 	to{
 		background-position:100% 0%
 	}
-
-.lucky-ball-up	
-	animation:ballup ease 5s
-	top:0
-
-.big--swing
-	// animation 
-
-.suggest--cloth--right
-	animation: topittop ease 4s
-
-.suggest--item--left
-	animation: itemleft ease 4s
-
-.topic--top 
-	animation: topictop ease 1s
-
-.ktBK--opacity
-	animation: ktlogo ease 2s
-
-.bubble--pop 
-	animation: bubblepop ease 3s
-
-section
-	animation: sc ease 2s
-	max-height:720px
-	
-.allbk
-	width:100%
-	height:100%
-	background: url('../img/BG-4.jpg') repeat center -25px
-	animation: bk ease 1s
-
-.bg_3--top
-	animation: top3 ease 4s
-
+@keyframes showcontent
+	0%{
+		opacity:0
+	}
+	60%{
+		opacity:0
+	}
+	80%{
+		opacity:1
+	}
+@keyframes showball
+	0%{
+		transform:translate3d(30px, 0px,0)
+	}
+	60%{
+		transform:translate3d(30px, 0px,0)
+	}
+	80%{
+		transform:translate3d(0px, 0px,0)
+	}
+		
 .ror 
 	animation: rotationthis 24s linear infinite
 	transform:translate3d(0,0,-30)
-  
-.bktransition
-	// background: url('../img/BG2.jpg') repeat center -25px 
-	animation: bktrans 5s linear
 
 .m1
 	position:absolute
@@ -685,53 +666,26 @@ section
 .closeit 
 	display:none
 
-.lucky-result-div
-	transform:translate3d(0,0,0)
-
-.scrolldiv
-	width:43px
-	height:223px
-	right:20px
-	bottom:40px
-	position:fixed
-	// position:absolute
-	transform:translateZ(0)
-	background:url('../img/remind2.png') 
-
-.scrolldiv.show.down
-	animation: scrolldown 1s infinite alternate
-
-.scrolldiv.show
-	animation: scrollshow 5s linear
-
 .wheel-kitty
-	width:340px
-	height:433px
-	position: absolute
-	left:50%
-	margin-left: -170px
-	top:193px
-	z-index: 5
-	transform: translate3d(0,0,0)
+	// width:340px
+	// height:433px
+	// position: absolute
+	// left:50%
+	// margin-left: -170px
+	// top:193px
+	// z-index: 5
+	// transform: translate3d(0,0,0)
 
-.suggest-cloth-mask
-	width:378px
-	height:537px
-	position:absolute
-	z-index:10
-.suggest-cloth-mask:hover
-	background-image: url('../img/star-cloth.gif')
-	// background-size:100%
-	// animation: hovercloth .3s steps(3) infinite alternate
-	// transition: background-image 0.3s
+.wheel-bk
+	width: 340px
+	height: 340px
+	left: 330px
+	top:0px
+	position: absolute;
+	background: url('../img/wheel.png') no-repeat center
+.wrap2
+	animation:showcontent 5s linear
 
-.suggest-item-mask
-	width:266px
-	height:408px
-	position:absolute
-	z-index:10
-.suggest-item-mask:hover
-	background-image: url('../img/star-item.gif')
-	// background-size:100%
-	// animation: hoveritem .3s steps(2) infinite alternate
-	// transition: background-image 0.3s
+.lucky-ball
+	animation: showball 5s linear
+	

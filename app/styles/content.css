@@ -4,19 +4,14 @@
 body{
 	background: url(../img/BG12.jpg) repeat 214px -90px;
 }
-/*::-webkit-scrollbar {
-width: 12px;
-}
-::-webkit-scrollbar-thumb {
--webkit-border-radius: 10px;
-border-radius: 10px;
-background:white;
-}
-::-webkit-scrollbar-track {
-background: #e50011;
-}*/
 /* ====================================== index.html =========================== */
 /* ========================== wrap =========================== */
+.fb{
+	background: url(../img/fb1.png) no-repeat center;
+}
+.weibo{
+	background: url(../img/weibo1.png) no-repeat center;
+}
 .topic{
 	background: url(../img/topic1.png) no-repeat center;
 }
@@ -62,59 +57,24 @@ background: #e50011;
 }
 .nav .n-shop:hover{
 	-moz-transform:scale(1.2);
-  -moz-transition: transform;
-  -moz-transition-duration: 0.3s;
-  -webkit-transform:scale(1.2);
-  -webkit-transition: transform;
-  -webkit-transition-duration: 0.3s;
-  -o-transform:scale(1.2);
-  -o-transition: transform;
-  -o-transition-duration: 0.3s;
-  -ms-transform:scale(1.2);
-  -ms-transition: transform;
-  -ms-transition-duration: 0.3s;
+    -moz-transition: transform;
+    -moz-transition-duration: 0.3s;
+    -webkit-transform:scale(1.2);
+    -webkit-transition: transform;
+    -webkit-transition-duration: 0.3s;
+    -o-transform:scale(1.2);
+    -o-transition: transform;
+    -o-transition-duration: 0.3s;
+    -ms-transform:scale(1.2);
+    -ms-transition: transform;
+    -ms-transition-duration: 0.3s;
 }
 .logo2{
 	background: url(../img/logo2.png) no-repeat center;
 }
 /* ====================================== content.html =========================== */
 #bg2{
-	/*background: #e50011;*/
-	background: url(../img/BG2.jpg) repeat center -25px;
-}
-
-#bg_4{
-	background: url(../img/BG-4.jpg) repeat center -25px;	
-}
-.bg_3{
-	width: 100%;
-	height: 1600px;
-	opacity: .8;
-	position: absolute;
-	z-index: 3;
-	top:0;
-	left: 0;
-	background: url(../img/BG-3.png) repeat center -25px;
-}
-.bg_2{
-	position: absolute;
-	z-index: 2;
-	top:0;
-	left: 0;
-	width: 100%;
-	height: 1000px;
-	opacity: .9;
-	background: url(../img/BG-2.png) repeat center -25px;
-}
-.bg_1{
-	position: absolute;
-	z-index: 1;
-	top:1600px;
-	left: 0;
-	width: 100%;
-	height: 1600px;
-	opacity: .9;
-	background: url(../img/BG-1.png) repeat center -25px;
+	background: url(../img/BG2.jpg) repeat center -35px;
 }
 .wheel-kitty{
 	background: url(../img/KT-1.png) no-repeat center;
@@ -131,6 +91,18 @@ background: #e50011;
 }
 .share-btn .wb-share{
 	background: url(../img/weibo.png) no-repeat center;
+}
+.suggest-item .star{
+	background:url(../img/star-item.png) no-repeat center top;
+}
+.suggest-item .star:hover{
+	background:url(../img/star-item.gif) no-repeat center;
+}
+.suggest-cloth .star{
+	background:url(../img/star-cloth.png) no-repeat center top;
+}
+.suggest-cloth .star:hover{
+	background:url(../img/star-cloth.gif) no-repeat center;
 }
 .con .nav .n-acti {
 	background: url(../img/nav-activity3.png) no-repeat center;
