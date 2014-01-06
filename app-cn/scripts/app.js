@@ -118,7 +118,7 @@
   }
   if (contentValue.value === 'content') {
     lasturl = document.referrer;
-    reg = /(istayreal)|(localhost)/;
+    reg = /(istayreal)|(localhost)|(stdev)/;
     if (!reg.test(lasturl)) {
       window.location.href = '/';
     }

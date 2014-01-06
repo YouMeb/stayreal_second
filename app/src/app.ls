@@ -225,7 +225,7 @@ if($postpic)
 
 if content-value.value == 'content'
 	lasturl = document.referrer
-	reg = /(istayreal)|(localhost)/
+	reg = /(istayreal)|(localhost)|(stdev)/
 	if (!reg.test(lasturl))
 		window.location.href = '/'
 	FB.getLoginStatus((_resp) ->
