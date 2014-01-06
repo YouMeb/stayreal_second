@@ -167,37 +167,37 @@ play-again = document.getElementById('play-again')
 if(gfb)
 	gfb.onclick = ->
 		if content-value.value == 'content'
-			ga('send', 'event', '活動內頁', 'FB button', 'Facebook分享')
+			ga('send', 'event', '活動內頁2', 'FB button', 'Facebook分享')
 		else
 			ga('send', 'event', '活動首頁', 'FB button', 'Facebook分享')
 
 if(gweibo)
 	gweibo.onclick = ->
 		if content-value.value == 'content'
-			ga('send', 'event', '活動內頁', 'Weibo button', '微博分享')
+			ga('send', 'event', '活動內頁2', 'Weibo button', '微博分享')
 		else 
 			ga('send', 'event', '活動首頁', 'Weibo button', '微博分享')
 if(gsgitem)
 	gsgitem.onclick = ->
-		ga('send', 'event', '活動內頁', 'productlink', '建議小物')
+		ga('send', 'event', '活動內頁2', 'productlink', '建議小物')
 if(gsgdress)
 	gsgdress.onclick = ->
-		ga('send', 'event', '活動內頁', 'productlink', '建議穿搭')
+		ga('send', 'event', '活動內頁2', 'productlink', '建議穿搭')
 if(gna)
 	gna.onclick = -> 
 		if content-value.value == 'content'
-			ga('send', 'event', '活動內頁', 'eventlink', '一元復始開運金活動')
+			ga('send', 'event', '活動內頁2', 'eventlink', '一元復始開運金活動')
 		else
 			ga('send', 'event', '活動首頁', 'eventlink', '一元復始開運金活動')
 if(gns)
 	gns.onclick = ->
 		if content-value.value == 'content'
-			ga('send', 'event', '活動內頁', 'productlink', '開運商品馬上購買')
+			ga('send', 'event', '活動內頁2', 'productlink', '開運商品馬上購買')
 		else
 			ga('send', 'event', '活動首頁', 'productlink', '開運商品馬上購買')
 if(play-again)
 	play-again.onclick= ->
-		ga('send', 'event', '活動內頁', 'Play', '再玩一次')
+		ga('send', 'event', '活動內頁2', 'Play', '再玩一次')
 # year = $year.options[$year.selectedIndex].value
 # month = $month.options[$month.selectedIndex].value
 # day = $day.options[$day.selectedIndex].value
@@ -226,8 +226,8 @@ if($postpic)
 if content-value.value == 'content'
 	lasturl = document.referrer
 	reg = /(istayreal)|(localhost)/
-	# if (!reg.test(lasturl))
-	# 	window.location.href = '/'
+	if (!reg.test(lasturl))
+		window.location.href = '/'
 	FB.getLoginStatus((_resp) ->
 		# console.log(_resp)
 		if (_resp.status == 'connected') 

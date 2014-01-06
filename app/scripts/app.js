@@ -155,7 +155,7 @@
   if (gfb) {
     gfb.onclick = function(){
       if (contentValue.value === 'content') {
-        return ga('send', 'event', '活動內頁', 'FB button', 'Facebook分享');
+        return ga('send', 'event', '活動內頁2', 'FB button', 'Facebook分享');
       } else {
         return ga('send', 'event', '活動首頁', 'FB button', 'Facebook分享');
       }
@@ -164,7 +164,7 @@
   if (gweibo) {
     gweibo.onclick = function(){
       if (contentValue.value === 'content') {
-        return ga('send', 'event', '活動內頁', 'Weibo button', '微博分享');
+        return ga('send', 'event', '活動內頁2', 'Weibo button', '微博分享');
       } else {
         return ga('send', 'event', '活動首頁', 'Weibo button', '微博分享');
       }
@@ -172,18 +172,18 @@
   }
   if (gsgitem) {
     gsgitem.onclick = function(){
-      return ga('send', 'event', '活動內頁', 'productlink', '建議小物');
+      return ga('send', 'event', '活動內頁2', 'productlink', '建議小物');
     };
   }
   if (gsgdress) {
     gsgdress.onclick = function(){
-      return ga('send', 'event', '活動內頁', 'productlink', '建議穿搭');
+      return ga('send', 'event', '活動內頁2', 'productlink', '建議穿搭');
     };
   }
   if (gna) {
     gna.onclick = function(){
       if (contentValue.value === 'content') {
-        return ga('send', 'event', '活動內頁', 'eventlink', '一元復始開運金活動');
+        return ga('send', 'event', '活動內頁2', 'eventlink', '一元復始開運金活動');
       } else {
         return ga('send', 'event', '活動首頁', 'eventlink', '一元復始開運金活動');
       }
@@ -192,7 +192,7 @@
   if (gns) {
     gns.onclick = function(){
       if (contentValue.value === 'content') {
-        return ga('send', 'event', '活動內頁', 'productlink', '開運商品馬上購買');
+        return ga('send', 'event', '活動內頁2', 'productlink', '開運商品馬上購買');
       } else {
         return ga('send', 'event', '活動首頁', 'productlink', '開運商品馬上購買');
       }
@@ -200,7 +200,7 @@
   }
   if (playAgain) {
     playAgain.onclick = function(){
-      return ga('send', 'event', '活動內頁', 'Play', '再玩一次');
+      return ga('send', 'event', '活動內頁2', 'Play', '再玩一次');
     };
   }
   fb.init();
@@ -228,6 +228,9 @@
   if (contentValue.value === 'content') {
     lasturl = document.referrer;
     reg = /(istayreal)|(localhost)/;
+    if (!reg.test(lasturl)) {
+      window.location.href = '/';
+    }
     FB.getLoginStatus(function(_resp){
       var uid, accessToken;
       if (_resp.status === 'connected') {
